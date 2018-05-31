@@ -1,2 +1,2 @@
 # can-your-final-proj
-allegro project
+an allegro c++ mini game
