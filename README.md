@@ -1,2 +1,4 @@
 # can-your-final-proj
-this is another update
+conflict solved~~
+this is an allegro c++ minigame project.
+that's can a seafood
