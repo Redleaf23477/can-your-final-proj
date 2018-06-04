@@ -23,17 +23,17 @@
 - `Interface`：對於每個階段的遊戲畫面建立專屬的class，`Interface`為 Virtual Class
 	- `Opening`：開頭動畫/選單
 	- `Naming`：取名字的遊戲階段
-	- `Gaming`：跟寵物互動、增加感情的階段
+	- `Gaming`：與萌寵互動、增加感情的階段
 	- `Ending`：遊戲結束，restart
 - `Circle`：座標(x, y, r)，做為Object裡面的元素
-- `Object`：對於每個遊戲物件都建立專屬的class，`Object`為Virtual Class
+- `Object`：對於每個遊戲物件都建立專屬的class，`Object`為 Virtual Class
 	- `Button`：按鈕
 	- `Pet`：可愛的萌寵
 	- `Ball`：跟你的萌寵玩球球
 	- `Food`：餵你的萌寵吃好料
 	- `Slider`：滑桿，控制音量大小之類的
 	- `Textbox`：讓你輸入可愛萌寵的名字
-- `KeyIn`：鍵盤輸入，把吃到的`ALLEGRO_KEYCODE`轉成c++ string
+- `KeyIn`：鍵盤輸入，把吃到的`ALLEGRO_KEYCODE`轉成 c++ string
 
 
 ## 預覽圖
