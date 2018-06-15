@@ -16,17 +16,12 @@ using namespace std;
 
 // my macros
 #define pw2(x) ((x)*(x))
+#define __FILENAME__ (strrchr(__FILE__, '\\') ? strrchr(__FILE__, '\\') + 1 : __FILE__)
+#define dbg cout<<"file="<<__FILENAME__<<", line="<<__LINE__<<", func="<<__func__<<endl
 
-// game states
-enum Stat
-{
-    STAT_INIT,
-    STAT_OPENING,
-    STAT_NAMING,
-    STAT_GAMING,
-    STAT_ENDING,
-    STAT_EXIT
-};
-
+// constants
+#define WIN_W 800
+#define WIN_H 600
+#define FPS 60.0
 
 #endif // GLOBAL_H

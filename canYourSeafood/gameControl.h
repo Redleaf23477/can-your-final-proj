@@ -7,11 +7,19 @@
 class gameControl
 {
 private:
-    static const int WIN_W = 800;
-    static const int WIN_H = 600;
+
+    enum Stat
+    {
+        STAT_INIT,
+        STAT_OPENING,
+        STAT_NAMING,
+        STAT_GAMING,
+        STAT_ENDING,
+        STAT_EXIT
+    };
+
     int stat;
     Interface *game_scene;
-    ALLEGRO_DISPLAY *display;
 
     void allegro_init();
     void game_init();

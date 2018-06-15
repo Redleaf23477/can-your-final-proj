@@ -2,16 +2,28 @@
 #define OPENING_H
 
 #include "Interface.h"
+#include "Object.h"
+#include "Button.h"
 
 class Opening : public Interface
 {
 protected:
-    void init();
-    void process();
-    void destroy();
+    enum Stat
+    {
+        OP_DONE,
+        OP_CONTINUE
+    };
+
+    Object *mouse;
+    int stat;
+    ButtonRD *start_but;
+
+    int process();
 
 public:
-    void run();
+    Opening();
+    ~Opening();
+    bool run();
 };
 
 #endif // OPENING_H

@@ -2,22 +2,20 @@
 #define OBJECT_H
 
 #include "global.h"
+#include "Circle.h"
 
 class Object
 {
-private:
+protected:
     Circle pos;
-    ALLEGRO_BITMAP *pic;
+//    ALLEGRO_BITMAP *pic;
 
 public:
-    bool is_mouse_touch(const Circle &) const;
-    void run();
-    void draw();
+    Object(int, int, int);
+    void set_pos(int, int);
+    virtual bool mouse_in(const Object*) const;
+    virtual int click();
+    virtual void draw();
 };
-
-bool Object::is_mouse_touch(const Circle &mouse) const
-{
-    return pos.collide(mouse);
-}
 
 #endif // OBJECT_H

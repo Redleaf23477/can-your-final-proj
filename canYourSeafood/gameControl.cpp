@@ -7,20 +7,36 @@ gameControl::gameControl()
 {
     stat = STAT_INIT;
     game_scene = NULL;
-    display = NULL;
 }
 
 gameControl::~gameControl()
 {
     delete game_scene;
-    delete display;
 }
 
 void gameControl::run()
 {
-    allegro_init();
-    game_init();
-    game_run();
+    while(stat != STAT_EXIT)
+    {
+        switch(stat)
+        {
+        case STAT_INIT:
+            allegro_init();
+            game_init();
+            break;
+        case STAT_OPENING:
+            game_run();
+            break;
+        case STAT_NAMING:
+            break;
+        case STAT_GAMING:
+            break;
+        case STAT_ENDING:
+            break;
+        default:
+            break;
+        }
+    }
     game_destroy();
 }
 
@@ -31,6 +47,8 @@ void gameControl::allegro_init()
         cout << "al_init failed" << endl;
         assert(false);
     }
+
+    cout << "Game init" << endl;
 
     al_init_primitives_addon();
     al_init_font_addon(); // initialize the font addon
@@ -47,32 +65,14 @@ void gameControl::game_init()
 {
     srand(time(NULL));
     game_scene = new Opening;
-    display = al_create_display(WIN_W, WIN_H);
+
+    stat = STAT_OPENING;
 }
 
 void gameControl::game_run()
 {
-    game_scene->run();
-    /*
-    while(stat != STAT_EXIT)
-    {
-        switch(stat)
-        {
-        case STAT_INIT:
-            break;
-        case STAT_OPENING:
-            break;
-        case STAT_NAMING:
-            break;
-        case STAT_GAMING:
-            break;
-        case STAT_ENDING:
-            break;
-        default:
-            break;
-        }
-    }
-    */
+    int res = game_scene->run();
+    if(res == 0) stat = STAT_EXIT;
 }
 
 void gameControl::game_destroy()
