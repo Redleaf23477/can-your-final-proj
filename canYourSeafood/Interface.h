@@ -21,7 +21,7 @@ protected:
 public:
     Interface();
     virtual ~Interface();
-    virtual bool run() = 0;
+    virtual int run() = 0;
 };
 
 

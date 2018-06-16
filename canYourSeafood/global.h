@@ -24,4 +24,20 @@ using namespace std;
 #define WIN_H 600
 #define FPS 60.0
 
+
+// game status
+enum Stat
+{
+    STAT_INIT,
+    STAT_OPENING,
+    STAT_NAMING,
+    STAT_GAMING,
+    STAT_ENDING,
+    STAT_EXIT,
+
+    INTER_DONE,
+    INTER_CONTINUE,
+    INTER_EXIT
+};
+
 #endif // GLOBAL_H

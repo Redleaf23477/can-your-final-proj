@@ -3,27 +3,19 @@
 
 #include "global.h"
 #include "Interface.h"
+#include "Opening.h"
+#include "Naming.h"
 
 class gameControl
 {
 private:
-
-    enum Stat
-    {
-        STAT_INIT,
-        STAT_OPENING,
-        STAT_NAMING,
-        STAT_GAMING,
-        STAT_ENDING,
-        STAT_EXIT
-    };
-
     int stat;
     Interface *game_scene;
 
     void allegro_init();
     void game_init();
     void game_run();
+    void game_reset();
     void game_destroy();
 
 public:

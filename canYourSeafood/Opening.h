@@ -8,12 +8,6 @@
 class Opening : public Interface
 {
 protected:
-    enum Stat
-    {
-        OP_DONE,
-        OP_CONTINUE
-    };
-
     Object *mouse;
     int stat;
     ButtonRD *start_but;
@@ -23,7 +17,7 @@ protected:
 public:
     Opening();
     ~Opening();
-    bool run();
+    int run();
 };
 
 #endif // OPENING_H
