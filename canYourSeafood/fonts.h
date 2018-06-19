@@ -1,9 +1,18 @@
 #ifndef FONTS_H
 #define FONTS_H
 
+/*
+    A class that contains all fonts used in the project.
+    set the pointer to NULL in the constructor
+    call al_load_ttf_font("../assets/font/xxx.ttf", size, 0) in the "load" function
+    call al_destroy_font() int the "destroy" function
+    for each kind of text, build a member function to map them to a font
+*/
+
 class Fonts
 {
 private:
+    // ALLEGRO_FONT *fontName_size
     ALLEGRO_FONT *impact_small;
 
 public:
