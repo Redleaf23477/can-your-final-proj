@@ -4,6 +4,10 @@ Object::Object(int x, int y, int r):pos(x, y, r)
 {
 }
 
+Object::~Object()
+{
+}
+
 void Object::set_pos(int x, int y)
 {
     pos.set_pos(x, y);

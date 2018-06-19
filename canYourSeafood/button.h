@@ -15,6 +15,7 @@ public:
     ButtonRD(int, int, int);
     ~ButtonRD();
     int click();
+    void set_str(string);
     void draw() override;
 };
 

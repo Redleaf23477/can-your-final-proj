@@ -2,6 +2,10 @@
 
 Circle::Circle(int x, int y, int r):_x(x), _y(y), _r(r){}
 
+Circle::~Circle()
+{
+}
+
 void Circle::set_pos(int x, int y)
 {
     _x = x, _y = y;

@@ -5,6 +5,8 @@
 #include "Interface.h"
 #include "Opening.h"
 #include "Naming.h"
+#include "Gaming.h"
+#include "Ending.h"
 
 class gameControl
 {
@@ -22,6 +24,7 @@ private:
 public:
     gameControl();
     ~gameControl();
+
     void run();
 };
 

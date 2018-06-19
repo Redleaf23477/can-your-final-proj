@@ -11,8 +11,9 @@ protected:
     ALLEGRO_EVENT event;
     ALLEGRO_DISPLAY *display;
     ALLEGRO_TIMER *timer;
+//    ALLEGRO_BITMAP *bg;
 
-    vector<Object*> objs;            // an array that stores every pointer of obj in the interface
+    vector<Object*> vis_objs;            // an array that stores every pointer of visible objects in the interface
     int stat;
 
     virtual int process() = 0;

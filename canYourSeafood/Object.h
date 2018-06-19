@@ -12,6 +12,7 @@ protected:
 
 public:
     Object(int, int, int);
+    virtual ~Object();
     void set_pos(int, int);
     virtual bool mouse_in(const Object*) const;
     virtual int click();

@@ -4,8 +4,9 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     stat = INTER_CONTINUE;
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 100);
+    start_but->set_str("name");
+    vis_objs.push_back(start_but);
     mouse = new Object(0, 0, 1);
-    objs.push_back(start_but);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_mouse_event_source());
@@ -15,7 +16,6 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 
 Naming::~Naming()
 {
-    delete start_but;
     delete mouse;
 }
 
@@ -35,7 +35,7 @@ int Naming::process()
 
     if(event.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
     {
-        return INTER_DONE;
+        return INTER_EXIT;
     }
     else if(event.type == ALLEGRO_EVENT_TIMER)
     {

@@ -2,20 +2,22 @@
 
 ButtonRD::ButtonRD(int x, int y, int r):Object(x, y, r)
 {
-    font = al_load_ttf_font("../assets/font/impact.ttf", 24, 0);
+    font = font_lib.button_txt();
     str = "Start!";
 }
 
 ButtonRD::~ButtonRD()
 {
-    al_destroy_font(font);
-
-    delete font;
 }
 
 int ButtonRD::click()
 {
     return 1;
+}
+
+void ButtonRD::set_str(string s)
+{
+    str = s;
 }
 
 void ButtonRD::draw()

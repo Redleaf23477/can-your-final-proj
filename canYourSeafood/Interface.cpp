@@ -15,14 +15,12 @@ Interface::~Interface()
     al_destroy_event_queue(event_queue);
     al_destroy_timer(timer);
 
-    for(auto &obj:objs) delete obj;
-    delete event_queue;
-    delete timer;
+    for(auto &obj:vis_objs) delete obj;
 }
 
 void Interface::draw()
 {
 //    al_draw_bitmap(bg, 0, 0, 0);
     al_clear_to_color(al_map_rgb(100, 100, 100));
-    for(auto obj:objs) obj->draw();
+    for(auto obj:vis_objs) obj->draw();
 }

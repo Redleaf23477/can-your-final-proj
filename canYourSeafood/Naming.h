@@ -2,6 +2,7 @@
 #define NAMING_H
 
 #include "Interface.h"
+#include "Object.h"
 #include "Button.h"
 
 class Naming : public Interface

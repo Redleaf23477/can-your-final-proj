@@ -4,8 +4,9 @@ Opening::Opening(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     stat = INTER_CONTINUE;
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 50);
+    start_but->set_str("open");
+    vis_objs.push_back(start_but);
     mouse = new Object(0, 0, 1);
-    objs.push_back(start_but);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_mouse_event_source());
@@ -14,7 +15,6 @@ Opening::Opening(ALLEGRO_DISPLAY *dis):Interface(dis)
 
 Opening::~Opening()
 {
-    delete start_but;
     delete mouse;
 }
 

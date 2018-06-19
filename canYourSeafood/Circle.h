@@ -10,6 +10,7 @@ private:
 
 public:
     Circle(int, int, int);
+    ~Circle();
     bool collide(const Circle &) const ;
     void set_pos(int, int);
     int get_x() const { return _x; }

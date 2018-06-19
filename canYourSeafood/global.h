@@ -40,4 +40,9 @@ enum Stat
     INTER_EXIT
 };
 
+// fonts library
+#include "fonts.h"
+extern Fonts font_lib;
+
+
 #endif // GLOBAL_H
