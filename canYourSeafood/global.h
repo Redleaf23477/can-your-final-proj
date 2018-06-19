@@ -16,8 +16,16 @@ using namespace std;
 
 // my macros
 #define pw2(x) ((x)*(x))
+#define __FILENAME__ (strrchr(__FILE__, '\\') ? strrchr(__FILE__, '\\') + 1 : __FILE__)
+#define dbg cout<<"file="<<__FILENAME__<<", line="<<__LINE__<<", func="<<__func__<<endl
 
-// game states
+// constants
+#define WIN_W 800
+#define WIN_H 600
+#define FPS 60.0
+
+
+// game status
 enum Stat
 {
     STAT_INIT,
@@ -25,8 +33,16 @@ enum Stat
     STAT_NAMING,
     STAT_GAMING,
     STAT_ENDING,
-    STAT_EXIT
+    STAT_EXIT,
+
+    INTER_DONE,
+    INTER_CONTINUE,
+    INTER_EXIT
 };
+
+// fonts library
+#include "fonts.h"
+extern Fonts font_lib;
 
 
 #endif // GLOBAL_H

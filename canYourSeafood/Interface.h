@@ -2,22 +2,27 @@
 #define INTERFACE_H
 
 #include "global.h"
+#include "Object.h"
 
 class Interface
 {
 protected:
-//    vector<*Object> objs;            // an array that stores every pointer of obj in the interface
+    ALLEGRO_EVENT_QUEUE *event_queue;
+    ALLEGRO_EVENT event;
+    ALLEGRO_DISPLAY *display;
+    ALLEGRO_TIMER *timer;
+//    ALLEGRO_BITMAP *bg;
 
-    virtual void init() = 0;
-    virtual void process() = 0;
-    virtual void destroy() = 0;
+    vector<Object*> vis_objs;            // an array that stores every pointer of visible objects in the interface
+    int stat;
+
+    virtual int process() = 0;
     virtual void draw();
 
 public:
-    Interface();
+    Interface(ALLEGRO_DISPLAY*);
     virtual ~Interface();
-    virtual void run() = 0;
-//    Circle mouse;
+    virtual int run() = 0;
 };
 
 

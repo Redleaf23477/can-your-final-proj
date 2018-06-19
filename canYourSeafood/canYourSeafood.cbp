@@ -24,7 +24,7 @@
 			<Target title="Release">
 				<Option output="bin/Release/canYourSeafood" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
@@ -39,9 +39,16 @@
 			<Add option="-Wall" />
 			<Add directory="allegro-5.0.10-mingw-4.7.0/include" />
 		</Compiler>
+		<Unit filename="Circle.cpp" />
+		<Unit filename="Circle.h" />
+		<Unit filename="Interface.cpp" />
 		<Unit filename="Interface.h" />
+		<Unit filename="Object.h" />
 		<Unit filename="Opening.cpp" />
 		<Unit filename="Opening.h" />
+		<Unit filename="Opject.cpp" />
+		<Unit filename="button.cpp" />
+		<Unit filename="button.h" />
 		<Unit filename="gameControl.cpp" />
 		<Unit filename="gameControl.h" />
 		<Unit filename="global.h" />
