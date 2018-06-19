@@ -19,7 +19,7 @@ protected:
     virtual void draw();
 
 public:
-    Interface();
+    Interface(ALLEGRO_DISPLAY*);
     virtual ~Interface();
     virtual int run() = 0;
 };

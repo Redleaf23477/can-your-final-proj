@@ -11,6 +11,7 @@ class gameControl
 private:
     int stat;
     Interface *game_scene;
+    ALLEGRO_DISPLAY *display;
 
     void allegro_init();
     void game_init();

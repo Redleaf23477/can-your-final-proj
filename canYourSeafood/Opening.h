@@ -15,7 +15,7 @@ protected:
     int process();
 
 public:
-    Opening();
+    Opening(ALLEGRO_DISPLAY*);
     ~Opening();
     int run();
 };

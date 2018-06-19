@@ -1,6 +1,6 @@
 #include "Naming.h"
 
-Naming::Naming()
+Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     stat = INTER_CONTINUE;
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 100);

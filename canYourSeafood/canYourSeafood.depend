@@ -3,19 +3,19 @@
 
 1528754037 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.cpp
 
-1528753963 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.cpp
+1529391314 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.cpp
+	"Naming.h"
 
-1529040750 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.cpp
+1529390920 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.cpp
 	"gameControl.h"
+
+1529390823 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.h
 	"global.h"
 	"Interface.h"
 	"Opening.h"
+	"Naming.h"
 
-1529040172 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.h
-	"global.h"
-	"Interface.h"
-
-1529072403 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.h
+1529092780 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.h
 	<bits/stdc++.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -273,7 +273,7 @@
 	"global.h"
 	"gameControl.h"
 
-1529072087 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.h
+1529390974 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.h
 	"global.h"
 	"Object.h"
 
@@ -281,12 +281,12 @@
 	"global.h"
 	"Circle.h"
 
-1529071279 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.h
+1529391084 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529072260 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.cpp
+1529391122 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.cpp
 	"Opening.h"
 
 1529072456 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.cpp
@@ -620,4 +620,8 @@
 
 1529120743 source:c:\users\user\documents\github\can-your-final-proj\canyourseafood\naming.cpp
 	"Naming.h"
+
+1529391320 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.h
+	"Interface.h"
+	"Button.h"
 

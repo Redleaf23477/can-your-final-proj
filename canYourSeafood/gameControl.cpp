@@ -5,6 +5,7 @@ gameControl::gameControl()
 {
     stat = STAT_INIT;
     game_scene = NULL;
+    display = NULL;
     srand(time(NULL));
 }
 
@@ -71,7 +72,8 @@ void gameControl::allegro_init()
 
 void gameControl::game_init()
 {
-    game_scene = new Opening;
+    display = al_create_display(WIN_W, WIN_H);
+    game_scene = new Opening(display);
     stat = STAT_OPENING;
 }
 
@@ -84,7 +86,7 @@ void gameControl::game_run()
         dbg << "hi" << endl;
         switch(stat)
         {
-        case STAT_OPENING: stat = STAT_NAMING; game_scene = new Naming; break;
+        case STAT_OPENING: stat = STAT_NAMING; game_scene = new Naming(display); break;
         case STAT_NAMING:  stat = STAT_EXIT; game_scene = NULL; break;
 //        case STAT_NAMING:  stat = STAT_GAMING; game_scene = new Gaming; break;
 //        case STAT_GAMING:  stat = STAT_ENDING; game_scene = new Ending; break;
@@ -103,4 +105,5 @@ void gameControl::game_run()
 
 void gameControl::game_destroy()
 {
+    al_destroy_display(display);
 }
