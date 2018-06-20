@@ -48,13 +48,19 @@ dbg << "My debug Message" << endl;
 - `gameControl::run()`：整個遊戲的有限狀態機
 - `gameControl::game_run()`：執行這個stat該運作的Interface(呼叫這個Interface的`run()`)，並且根據`Interface::run()`的回傳值決定下一個stat是誰
 
+### 顏色與字型
+通通都丟在fonts.h/.cpp。
+顏色用`C`這個namespace包起來丟在權域，fonts.h裡面用extern，實際宣告在fonts.cpp裡面，在Fonts::load()裡面初始化，使用的時候`C::your_color`。
+字型丟在`font_lib`這個物件裡面，ALLEGRO_FONT指標丟在private，使用的時候建立一個function來回傳(例如：`font_lib.your_font()`)。
+
 
 程式碼們
 --------
 ### main.cpp
 不解釋
-### font.h
+### fonts.h/.cpp
 因為字型會被很多東西共用到，所以把字型獨立一個class。
+顏色通通丟在權域，不過怕名稱衝突，我把他包在`C`這個namespace裡面。
 ### global.h
 各種函識庫，還有自定義的巨集、enmu
 ### gameControl.h/.cpp
