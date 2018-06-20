@@ -5,3 +5,7 @@
 /canYourSeafood/obj/
 /canYourSeafood/allegro-5.0.10-mingw-4.7.0/
 /canYourSeafood/algif
+*.o
+*.depend
+*.exe
+*.log

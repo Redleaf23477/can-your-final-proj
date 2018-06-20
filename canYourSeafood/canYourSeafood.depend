@@ -1,17 +1,17 @@
 # depslib dependency file v1.0
-1529468176 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.cpp
 	"Ending.h"
 
-1529469423 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.cpp
 	"Gaming.h"
 
-1529472261 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.cpp
 	"Naming.h"
 
-1529468273 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.cpp
 	"gameControl.h"
 
-1529468235 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.h
 	"global.h"
 	"Interface.h"
 	"Opening.h"
@@ -19,7 +19,7 @@
 	"Gaming.h"
 	"Ending.h"
 
-1529469059 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.h
+1529482143 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.h
 	<bits/stdc++.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -278,23 +278,23 @@
 	"global.h"
 	"gameControl.h"
 
-1529468121 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.h
 	"global.h"
 	"Object.h"
 
-1529469641 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.h
 	"global.h"
 	"Circle.h"
 
-1529468087 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529468179 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.cpp
 	"Opening.h"
 
-1529467501 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.cpp
+1529473476 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.cpp
 	"Interface.h"
 	"global.h"
 	"fonts.h"
@@ -629,27 +629,27 @@
 1529120743 source:c:\users\user\documents\github\can-your-final-proj\canyourseafood\naming.cpp
 	"Naming.h"
 
-1529471419 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.h
 	"Interface.h"
 	"Object.h"
 	"gifobj.h"
 	"Button.h"
 	"textbox.h"
 
-1529469413 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529468074 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529469654 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.cpp
 	"Object.h"
 
-1529470762 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.h
 	"global.h"
 
 1529464642 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\textbox.h
@@ -661,7 +661,7 @@
 	"textbox.h"
 	"global.h"
 
-1529470757 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.cpp
+1529473476 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.cpp
 	"fonts.h"
 
 1529411795 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\algif\algif.h
@@ -670,13 +670,13 @@
 1362327500 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
 	"allegro.h"
 
-1529467893 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.cpp
+1529482143 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.cpp
 	"global.h"
 
-1529471066 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gifobj.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gifobj.cpp
 	"gifobj.h"
 
-1529471122 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gifobj.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gifobj.h
 	"global.h"
 	"Object.h"
 
