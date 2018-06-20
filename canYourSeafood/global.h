@@ -40,9 +40,9 @@ enum Stat
     INTER_EXIT
 };
 
-// fonts library
-#include "fonts.h"
-extern Fonts font_lib;
+// load ALLEGRO stuffs
+ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename);
 
+ALLEGRO_BITMAP* load_bitmap_at_size(const char *filename, int w, int h);
 
 #endif // GLOBAL_H

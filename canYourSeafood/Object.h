@@ -14,8 +14,8 @@ public:
     Object(int, int, int);
     virtual ~Object();
     void set_pos(int, int);
-    virtual bool mouse_in(const Object*) const;
-    virtual int click();
+    virtual bool mouse_in(const Object*) const;  // detect if mouse touch the object
+    virtual int click();                         // callback function when the object is clicked
     virtual void draw();
 };
 

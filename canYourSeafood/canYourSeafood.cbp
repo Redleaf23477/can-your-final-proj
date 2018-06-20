@@ -41,18 +41,28 @@
 		</Compiler>
 		<Unit filename="Circle.cpp" />
 		<Unit filename="Circle.h" />
+		<Unit filename="Ending.cpp" />
+		<Unit filename="Ending.h" />
+		<Unit filename="Gaming.cpp" />
+		<Unit filename="Gaming.h" />
 		<Unit filename="Interface.cpp" />
 		<Unit filename="Interface.h" />
+		<Unit filename="Naming.cpp" />
+		<Unit filename="Naming.h" />
+		<Unit filename="Object.cpp" />
 		<Unit filename="Object.h" />
 		<Unit filename="Opening.cpp" />
 		<Unit filename="Opening.h" />
-		<Unit filename="Opject.cpp" />
 		<Unit filename="button.cpp" />
 		<Unit filename="button.h" />
+		<Unit filename="fonts.cpp" />
+		<Unit filename="fonts.h" />
 		<Unit filename="gameControl.cpp" />
 		<Unit filename="gameControl.h" />
 		<Unit filename="global.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="textbox.cpp" />
+		<Unit filename="textbox.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
