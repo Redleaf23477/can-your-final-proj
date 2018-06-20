@@ -1,6 +1,5 @@
 #ifndef FONTS_H
 #define FONTS_H
-
 #include "global.h"
 
 // color namespace
@@ -26,6 +25,7 @@ namespace C
     call al_destroy_font() int the "destroy" function
     for each kind of text, build a member function to map them to a font
 */
+
 class Fonts
 {
 private:
