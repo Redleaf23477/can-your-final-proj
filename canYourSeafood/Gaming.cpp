@@ -3,6 +3,10 @@
 Gaming::Gaming(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     stat = INTER_CONTINUE;
+
+    bgm = load_bgm("../assets/music/pika_volley.ogg");
+    bg = load_bitmap_at_size("../assets/background/aquarium.jpg", WIN_W, WIN_H);
+
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 50);
     start_but->set_str("game");
     vis_objs.push_back(start_but);
@@ -11,11 +15,15 @@ Gaming::Gaming(ALLEGRO_DISPLAY *dis):Interface(dis)
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_mouse_event_source());
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
+
+    al_play_sample_instance(bgm);
 }
 
 Gaming::~Gaming()
 {
+    al_stop_sample_instance(bgm);
     delete mouse;
+    al_destroy_sample_instance(bgm);
 }
 
 int Gaming::run()

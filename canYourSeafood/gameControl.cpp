@@ -62,6 +62,8 @@ void gameControl::allegro_init()
     al_install_audio();    // install audio event
 
     font_lib.load();       // load my fucking font library
+
+    al_reserve_samples(5); // at most 5 music at a time
 }
 
 void gameControl::game_init()

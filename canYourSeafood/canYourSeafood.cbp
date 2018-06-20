@@ -55,11 +55,14 @@
 		<Unit filename="Opening.h" />
 		<Unit filename="button.cpp" />
 		<Unit filename="button.h" />
+		<Unit filename="fonts.cpp" />
 		<Unit filename="fonts.h" />
 		<Unit filename="gameControl.cpp" />
 		<Unit filename="gameControl.h" />
 		<Unit filename="global.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="textbox.cpp" />
+		<Unit filename="textbox.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
