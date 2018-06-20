@@ -3,6 +3,7 @@
 
 #include "global.h"
 #include "Object.h"
+#include "fonts.h"
 
 // round button
 class ButtonRD:public Object
