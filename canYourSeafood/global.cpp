@@ -1,10 +1,10 @@
 #include "global.h"
 
-ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename)
+ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename, const ALLEGRO_PLAYMODE mode)
 {
     ALLEGRO_SAMPLE *sample = al_load_sample(filename);
     ALLEGRO_SAMPLE_INSTANCE *bgm = al_create_sample_instance(sample);
-    al_set_sample_instance_playmode(bgm, ALLEGRO_PLAYMODE_ONCE);
+    al_set_sample_instance_playmode(bgm, mode);
     al_attach_sample_instance_to_mixer(bgm, al_get_default_mixer());
     return bgm;
 }

@@ -1,17 +1,17 @@
 # depslib dependency file v1.0
-1529397362 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.cpp
 	"Ending.h"
 
-1529466686 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.cpp
 	"Gaming.h"
 
-1529470080 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.cpp
 	"Naming.h"
 
-1529464326 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.cpp
 	"gameControl.h"
 
-1529398924 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gamecontrol.h
 	"global.h"
 	"Interface.h"
 	"Opening.h"
@@ -19,7 +19,7 @@
 	"Gaming.h"
 	"Ending.h"
 
-1529467657 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.h
+1529482143 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.h
 	<bits/stdc++.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -28,6 +28,7 @@
 	<allegro5/allegro_primitives.h>
 	<allegro5/allegro_audio.h>
 	<allegro5/allegro_acodec.h>
+	"./algif/algif.h"
 
 1372628331 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro.h
 	"allegro5/base.h"
@@ -277,23 +278,23 @@
 	"global.h"
 	"gameControl.h"
 
-1529467414 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.h
 	"global.h"
 	"Object.h"
 
-1529459474 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.h
 	"global.h"
 	"Circle.h"
 
-1529391084 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529397132 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\opening.cpp
 	"Opening.h"
 
-1529467501 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.cpp
+1529473476 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\interface.cpp
 	"Interface.h"
 	"global.h"
 	"fonts.h"
@@ -628,26 +629,27 @@
 1529120743 source:c:\users\user\documents\github\can-your-final-proj\canyourseafood\naming.cpp
 	"Naming.h"
 
-1529464021 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\naming.h
 	"Interface.h"
 	"Object.h"
+	"gifobj.h"
 	"Button.h"
 	"textbox.h"
 
-1529464523 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gaming.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529397339 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\ending.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529396561 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.cpp
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\object.cpp
 	"Object.h"
 
-1529470762 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.h
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.h
 	"global.h"
 
 1529464642 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\textbox.h
@@ -659,6 +661,419 @@
 	"textbox.h"
 	"global.h"
 
-1529470757 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.cpp
+1529473476 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\fonts.cpp
 	"fonts.h"
+
+1529411795 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\algif\algif.h
+	<allegro5/allegro5.h>
+
+1362327500 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
+	"allegro.h"
+
+1529482143 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\global.cpp
+	"global.h"
+
+1529482142 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gifobj.cpp
+	"gifobj.h"
+
+1529482142 c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\gifobj.h
+	"global.h"
+	"Object.h"
+
+1529411795 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\algif\algif.c
+	"algif.h"
+	<allegro5/allegro_primitives.h>
+	<math.h>
+
+1529411795 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\algif\bitmap.c
+	"algif.h"
+
+1529411795 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\algif\gif.c
+	"algif.h"
+	<stdlib.h>
+	<string.h>
+
+1529411795 source:c:\users\redleaf\documents\github\can-your-final-proj\canyourseafood\algif\lzw.c
+	"algif.h"
+
+1529411240 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\button.cpp
+	"button.h"
+
+1529509348 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\button.h
+	"global.h"
+	"Object.h"
+	"fonts.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\global.h
+	<bits/stdc++.h>
+	<allegro5/allegro.h>
+	<allegro5/allegro_image.h>
+	<allegro5/allegro_font.h>
+	<allegro5/allegro_ttf.h>
+	<allegro5/allegro_primitives.h>
+	<allegro5/allegro_audio.h>
+	<allegro5/allegro_acodec.h>
+	"./algif/algif.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro.h
+	"allegro5/base.h"
+	"allegro5/altime.h"
+	"allegro5/bitmap.h"
+	"allegro5/bitmap_draw.h"
+	"allegro5/bitmap_io.h"
+	"allegro5/bitmap_lock.h"
+	"allegro5/blender.h"
+	"allegro5/color.h"
+	"allegro5/config.h"
+	"allegro5/debug.h"
+	"allegro5/display.h"
+	"allegro5/drawing.h"
+	"allegro5/error.h"
+	"allegro5/events.h"
+	"allegro5/file.h"
+	"allegro5/fixed.h"
+	"allegro5/fmaths.h"
+	"allegro5/fshook.h"
+	"allegro5/fullscreen_mode.h"
+	"allegro5/joystick.h"
+	"allegro5/keyboard.h"
+	"allegro5/memory.h"
+	"allegro5/monitor.h"
+	"allegro5/mouse.h"
+	"allegro5/mouse_cursor.h"
+	"allegro5/path.h"
+	"allegro5/system.h"
+	"allegro5/threads.h"
+	"allegro5/timer.h"
+	"allegro5/tls.h"
+	"allegro5/transformations.h"
+	"allegro5/utf8.h"
+	"allegro5/alcompat.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\base.h
+	<errno.h>
+	<limits.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<sys/types.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"allegro5/internal/alconfig.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\internal\alconfig.h
+	"allegro5/platform/alplatf.h"
+	"allegro5/platform/alwatcom.h"
+	"allegro5/platform/almngw32.h"
+	"allegro5/platform/albcc32.h"
+	"allegro5/platform/almsvc.h"
+	"allegro5/platform/aliphonecfg.h"
+	"allegro5/platform/alosxcfg.h"
+	"allegro5/platform/alucfg.h"
+	"allegro5/platform/astdint.h"
+	"allegro5/platform/astdbool.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alplatf.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+	"allegro5/platform/alplatf.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\aliphonecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alosxcfg.h
+	"allegro5/platform/alplatf.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunix.h"
+	"allegro5/platform/alplatf.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\alunix.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\platform\astdbool.h
+	<stdbool.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\altime.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap.h
+	"allegro5/color.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\color.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_draw.h
+	"allegro5/bitmap.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_io.h
+	"allegro5/bitmap.h"
+	"allegro5/file.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\file.h
+	"allegro5/base.h"
+	"allegro5/path.h"
+	"allegro5/utf8.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\path.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\utf8.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\bitmap_lock.h
+	"allegro5/bitmap.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\blender.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\config.h
+	"allegro5/file.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\debug.h
+	<assert.h>
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\display.h
+	"allegro5/bitmap.h"
+	"allegro5/color.h"
+	"allegro5/events.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\events.h
+	"allegro5/altime.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\drawing.h
+	"allegro5/color.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\error.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\fixed.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\fmaths.h
+	"allegro5/base.h"
+	"allegro5/fixed.h"
+	"allegro5/inline/fmaths.inl"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\inline\fmaths.inl
+	"allegro5/error.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\fshook.h
+	"allegro5/base.h"
+	"allegro5/file.h"
+	"allegro5/path.h"
+	<sys/types.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\fullscreen_mode.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\joystick.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\keyboard.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+	"allegro5/keycodes.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\keycodes.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\memory.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\monitor.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse.h
+	"allegro5/base.h"
+	"allegro5/events.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\mouse_cursor.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\system.h
+	"allegro5/config.h"
+	"allegro5/path.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\threads.h
+	"allegro5/altime.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\timer.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\tls.h
+	"allegro5/base.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\transformations.h
+	"allegro5/display.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\alcompat.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_image.h
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_font.h
+	"allegro5/allegro.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_ttf.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_font.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_primitives.h
+	<allegro5/allegro.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_audio.h
+	"allegro5/allegro.h"
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro_acodec.h
+	"allegro5/allegro.h"
+	"allegro5/allegro_audio.h"
+
+1529411238 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\algif\algif.h
+	<allegro5/allegro5.h>
+
+1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
+	"allegro.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\object.h
+	"global.h"
+	"Circle.h"
+
+1529411238 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\circle.h
+	"global.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\fonts.h
+	"global.h"
+
+1529411238 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\circle.cpp
+	"Circle.h"
+
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\ending.cpp
+	"Ending.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\ending.h
+	"Interface.h"
+	"Object.h"
+	"Button.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\interface.h
+	"global.h"
+	"Object.h"
+
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gamecontrol.cpp
+	"gameControl.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gamecontrol.h
+	"global.h"
+	"Interface.h"
+	"Opening.h"
+	"Naming.h"
+	"Gaming.h"
+	"Ending.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\opening.h
+	"Interface.h"
+	"Object.h"
+	"Button.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\naming.h
+	"Interface.h"
+	"Object.h"
+	"gifobj.h"
+	"Button.h"
+	"textbox.h"
+
+1529509728 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gifobj.h
+	"global.h"
+	"Object.h"
+
+1529509348 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\textbox.h
+	"Object.h"
+	"global.h"
+	"fonts.h"
+
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gaming.h
+	"Interface.h"
+	"Object.h"
+	"Button.h"
+
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gaming.cpp
+	"Gaming.h"
+
+1529509348 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\interface.cpp
+	"Interface.h"
+	"global.h"
+	"fonts.h"
+
+1529509348 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\main.cpp
+	"global.h"
+	"gameControl.h"
+
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\naming.cpp
+	"Naming.h"
+
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\object.cpp
+	"Object.h"
+
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\opening.cpp
+	"Opening.h"
+
+1529509348 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\fonts.cpp
+	"fonts.h"
+
+1529507769 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gifobj.cpp
+	"gifobj.h"
+
+1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\global.cpp
+	"global.h"
+
+1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\textbox.cpp
+	"textbox.h"
+	"global.h"
+
+1529411238 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\algif\algif.c
+	"algif.h"
+	<allegro5/allegro_primitives.h>
+	<math.h>
+
+1529411238 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\algif\bitmap.c
+	"algif.h"
+
+1529411238 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\algif\gif.c
+	"algif.h"
+	<stdlib.h>
+	<string.h>
+
+1529411238 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\algif\lzw.c
+	"algif.h"
 

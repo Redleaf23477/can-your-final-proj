@@ -3,6 +3,7 @@
 
 #include "Interface.h"
 #include "Object.h"
+#include "gifobj.h"
 #include "Button.h"
 #include "textbox.h"
 
@@ -10,9 +11,10 @@ class Naming : public Interface
 {
 protected:
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
     Textbox *txt;
+    Gifobj *fish;
+    int nam_stat;
 
     int process();
 

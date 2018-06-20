@@ -10,7 +10,6 @@ class Gaming : public Interface
 protected:
     ALLEGRO_SAMPLE_INSTANCE *bgm;
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
 
     int process();
