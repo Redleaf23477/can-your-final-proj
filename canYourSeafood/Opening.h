@@ -11,6 +11,7 @@ protected:
     Object *mouse;
     int stat;
     ButtonRD *start_but;
+    ALLEGRO_BITMAP * BG;
 
     int process();
 

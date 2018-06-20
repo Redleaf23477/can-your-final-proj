@@ -3,9 +3,12 @@
 Opening::Opening(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     stat = INTER_CONTINUE;
+
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 50);
     start_but->set_str("open");
     vis_objs.push_back(start_but);
+
+    BG = ALLEGRO_
     mouse = new Object(0, 0, 1);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -52,4 +55,9 @@ int Opening::process()
         }
     }
     return INTER_CONTINUE;
+}
+
+void Opening::draw(){
+
+    for(auto obj:vis_objs) obj->draw();
 }
