@@ -13,7 +13,7 @@ protected:
     Object *mouse;
     ButtonRD *start_but;
     Textbox *txt;
-    Gifobj *togebi;
+    Gifobj *fish;
     int nam_stat;
 
     int process();

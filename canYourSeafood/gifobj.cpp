@@ -1,17 +1,49 @@
 #include "gifobj.h"
-
-Gifobj::Gifobj(int x, int y, int r, const char *path):Object(x, y, r)
+#define L 0
+#define R 1
+Gifobj::Gifobj(int x, int y, int r,int num_of_picture, int cd, const char *path):Object(x, y, r)
 {
-    gif = algif_load_animation(path);
+    dir = 0;
+    now = 0;
+    num = num_of_picture;
+    CD = cd;
+
+    stringstream SS;
+    string P;
+    for(int i=0;i<num;i++){
+        P.clear();
+        SS.clear();
+        SS << path << "/" << i << ".png";
+        SS >> P;
+        cout<<"load: "<<P<<endl;
+        ALLEGRO_BITMAP* T = load_bitmap_at_size(P.c_str(), 300, 330);
+        GIF.push_back(T);
+    }
+    cout<<"GIF load finish"<<endl;
 }
 
 Gifobj::~Gifobj()
 {
-    algif_destroy_animation(gif);
+    for(int i=0;i<num;i++)
+        al_destroy_bitmap(GIF[i]);
 }
 
 void Gifobj::draw()
 {
-    ALLEGRO_BITMAP *now = algif_get_bitmap(gif, al_get_time());
-    al_draw_bitmap(now, (float)pos.get_x(), (float)pos.get_y(), 0);
+    al_draw_bitmap(GIF[now],(float)pos.get_y(), (float)pos.get_y(), 0);
 }
+
+void Gifobj::change_dir(){
+    dir ^= 1;
+}
+void Gifobj::Move(){
+    static int count_down = CD;
+    count_down--;
+    if(count_down)return;
+    count_down = CD;
+    if(dir)
+        now = num/2 + (now + 1)% (num/2);
+    else
+        now = (now + 1)% (num/2);
+}
+

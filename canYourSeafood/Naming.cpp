@@ -9,8 +9,9 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
     vis_objs.push_back(start_but);
     txt = new Textbox(10, 10, 150, 30);
     vis_objs.push_back(txt);
-    togebi = new Gifobj(300, 10, 50, "../assets/fish/unknown_fish.gif");
-    vis_objs.push_back(togebi);
+
+    fish = new Gifobj(300, 10, 50, 18, "../assets/fish/bubble_fish");
+    vis_objs.push_back(fish);
     mouse = new Object(0, 0, 1);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -45,6 +46,8 @@ int Naming::process()
     else if(event.type == ALLEGRO_EVENT_TIMER)
     {
         al_flip_display();
+        if(fish)
+            fish->Move();
     }
     else if(event.type == ALLEGRO_EVENT_MOUSE_AXES)
     {

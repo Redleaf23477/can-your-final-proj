@@ -7,10 +7,13 @@
 class Gifobj : public Object
 {
 private:
-    ALGIF_ANIMATION *gif;
-
+    vector <ALLEGRO_BITMAP*> GIF;
+    int dir, now, num;
+    int CD;
 public:
-    Gifobj(int, int, int, const char*);
+    Gifobj(int x, int y, int r, int num_of_picture, const char* path);
+    void Move();
+    void change_dir();
     ~Gifobj();
     void draw();
 };

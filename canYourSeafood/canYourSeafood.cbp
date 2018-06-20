@@ -18,7 +18,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-monolith-mt-debug.a" />
+					<Add library="allegro-5.0.10-mingw-4.7.0/lib/liballegro-5.0.10-monolith-mt-debug.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -31,7 +31,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-monolith-mt.a" />
+					<Add library="allegro-5.0.10-mingw-4.7.0/lib/liballegro-5.0.10-monolith-mt.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -53,12 +53,28 @@
 		<Unit filename="Object.h" />
 		<Unit filename="Opening.cpp" />
 		<Unit filename="Opening.h" />
+		<Unit filename="algif/algif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="algif/algif.h" />
+		<Unit filename="algif/bitmap.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="algif/gif.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="algif/lzw.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="button.cpp" />
 		<Unit filename="button.h" />
 		<Unit filename="fonts.cpp" />
 		<Unit filename="fonts.h" />
 		<Unit filename="gameControl.cpp" />
 		<Unit filename="gameControl.h" />
+		<Unit filename="gifobj.cpp" />
+		<Unit filename="gifobj.h" />
+		<Unit filename="global.cpp" />
 		<Unit filename="global.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="textbox.cpp" />
