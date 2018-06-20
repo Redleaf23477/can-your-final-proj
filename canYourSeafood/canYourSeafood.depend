@@ -699,12 +699,12 @@
 1529411240 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\button.cpp
 	"button.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\button.h
+1529509348 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\button.h
 	"global.h"
 	"Object.h"
 	"fonts.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\global.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\global.h
 	<bits/stdc++.h>
 	<allegro5/allegro.h>
 	<allegro5/allegro_image.h>
@@ -965,35 +965,35 @@
 1529411239 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\allegro-5.0.10-mingw-4.7.0\include\allegro5\allegro5.h
 	"allegro.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\object.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\object.h
 	"global.h"
 	"Circle.h"
 
 1529411238 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\circle.h
 	"global.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\fonts.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\fonts.h
 	"global.h"
 
 1529411238 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\circle.cpp
 	"Circle.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\ending.cpp
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\ending.cpp
 	"Ending.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\ending.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\ending.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\interface.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\interface.h
 	"global.h"
 	"Object.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gamecontrol.cpp
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gamecontrol.cpp
 	"gameControl.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gamecontrol.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gamecontrol.h
 	"global.h"
 	"Interface.h"
 	"Opening.h"
@@ -1001,54 +1001,54 @@
 	"Gaming.h"
 	"Ending.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\opening.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\opening.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529508370 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\naming.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\naming.h
 	"Interface.h"
 	"Object.h"
 	"gifobj.h"
 	"Button.h"
 	"textbox.h"
 
-1529508414 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gifobj.h
+1529509728 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gifobj.h
 	"global.h"
 	"Object.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\textbox.h
+1529509348 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\textbox.h
 	"Object.h"
 	"global.h"
 	"fonts.h"
 
-1529501725 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gaming.h
+1529509352 c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gaming.h
 	"Interface.h"
 	"Object.h"
 	"Button.h"
 
-1529502949 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gaming.cpp
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gaming.cpp
 	"Gaming.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\interface.cpp
+1529509348 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\interface.cpp
 	"Interface.h"
 	"global.h"
 	"fonts.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\main.cpp
+1529509348 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\main.cpp
 	"global.h"
 	"gameControl.h"
 
-1529508371 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\naming.cpp
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\naming.cpp
 	"Naming.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\object.cpp
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\object.cpp
 	"Object.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\opening.cpp
+1529509352 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\opening.cpp
 	"Opening.h"
 
-1529501725 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\fonts.cpp
+1529509348 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\fonts.cpp
 	"fonts.h"
 
 1529507769 source:c:\users\cc229\desktop\can-your-final-proj\canyourseafood\gifobj.cpp

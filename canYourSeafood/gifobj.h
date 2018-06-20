@@ -11,7 +11,7 @@ private:
     int dir, now, num;
     int CD;
 public:
-    Gifobj(int x, int y, int r, int num_of_picture, const char* path);
+    Gifobj(int x, int y, int r, int num_of_picture,int cd, const char* path);
     void Move();
     void change_dir();
     ~Gifobj();

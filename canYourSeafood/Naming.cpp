@@ -10,7 +10,7 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
     txt = new Textbox(10, 10, 150, 30);
     vis_objs.push_back(txt);
 
-    fish = new Gifobj(300, 10, 50, 18, "../assets/fish/bubble_fish");
+    fish = new Gifobj(300, 10, 50, 18, 5, "../assets/fish/bubble_fish");
     vis_objs.push_back(fish);
     mouse = new Object(0, 0, 1);
 
