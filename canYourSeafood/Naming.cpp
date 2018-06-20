@@ -6,6 +6,8 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 100);
     start_but->set_str("name");
     vis_objs.push_back(start_but);
+    txt = new Textbox(10, 10, 10, 100);
+    vis_objs.push_back(txt);
     mouse = new Object(0, 0, 1);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -51,6 +53,10 @@ int Naming::process()
         {
             if(start_but->mouse_in(mouse)) return INTER_DONE;
         }
+    }
+    else if(event.type == ALLEGRO_EVENT_KEY_DOWN)
+    {
+        txt->run(event);
     }
     return INTER_CONTINUE;
 }

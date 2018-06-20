@@ -1,6 +1,8 @@
 #ifndef FONTS_H
 #define FONTS_H
 
+#include "global.h"
+
 /*
     A class that contains all fonts used in the project.
     set the pointer to NULL in the constructor
@@ -35,6 +37,16 @@ public:
     }
 
     ALLEGRO_FONT* button_txt() { return impact_small; }
+    ALLEGRO_FONT* textbox_txt() { return impact_small; }
 };
+extern Fonts font_lib;
+
+
+// color defines
+namespace C
+{
+    extern ALLEGRO_COLOR white;
+    extern ALLEGRO_COLOR black;
+}
 
 #endif // FONTS_H
