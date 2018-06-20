@@ -6,7 +6,7 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 100);
     start_but->set_str("name");
     vis_objs.push_back(start_but);
-    txt = new Textbox(10, 10, 10, 100);
+    txt = new Textbox(10, 10, 150, 30);
     vis_objs.push_back(txt);
     mouse = new Object(0, 0, 1);
 

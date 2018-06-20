@@ -41,6 +41,6 @@ void Textbox::draw()
 {
     float x1 = pos.get_x(), x2 = x1+width;
     float y1 = pos.get_y(), y2 = y1+height;
-    al_draw_filled_rectangle(x1, x2, y1, y2, box_col);
-    al_draw_text(font, txt_col, x1, y1, ALLEGRO_ALIGN_LEFT, str.c_str());
+    al_draw_filled_rectangle(x1, y1, x2, y2, box_col);
+    al_draw_text(font, txt_col, x1+10, y1, ALLEGRO_ALIGN_LEFT, str.c_str());
 }
