@@ -2,12 +2,15 @@
 
 Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
-    stat = INTER_CONTINUE;
+    inter_stat = INTER_CONTINUE;
+
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 100);
     start_but->set_str("name");
     vis_objs.push_back(start_but);
     txt = new Textbox(10, 10, 150, 30);
     vis_objs.push_back(txt);
+    togebi = new Gifobj(300, 10, 50, "../assets/fish/unknown_fish.gif");
+    vis_objs.push_back(togebi);
     mouse = new Object(0, 0, 1);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -25,10 +28,10 @@ int Naming::run()
 {
     if(!al_is_event_queue_empty(event_queue))
     {
-        stat = process();
+        inter_stat = process();
         draw();
     }
-    return stat;
+    return inter_stat;
 }
 
 int Naming::process()

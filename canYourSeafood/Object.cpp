@@ -18,11 +18,6 @@ bool Object::mouse_in(const Object *mouse) const
     return pos.collide(mouse->pos);
 }
 
-int Object::click()
-{
-    return 1;
-}
-
 void Object::draw()
 {
     al_draw_filled_circle((float)pos.get_x(), (float)pos.get_y(), pos.get_r(), al_map_rgb(71, 22, 22));

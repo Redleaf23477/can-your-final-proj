@@ -2,9 +2,9 @@
 
 Gaming::Gaming(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
-    stat = INTER_CONTINUE;
+    inter_stat = INTER_CONTINUE;
 
-    bgm = load_bgm("../assets/music/pika_volley.ogg");
+    bgm = load_bgm("../assets/music/pika_volley.ogg", ALLEGRO_PLAYMODE_LOOP);
     bg = load_bitmap_at_size("../assets/background/aquarium.jpg", WIN_W, WIN_H);
 
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 50);
@@ -30,10 +30,10 @@ int Gaming::run()
 {
     if(!al_is_event_queue_empty(event_queue))
     {
-        stat = process();
+        inter_stat = process();
         draw();
     }
-    return stat;
+    return inter_stat;
 }
 
 int Gaming::process()

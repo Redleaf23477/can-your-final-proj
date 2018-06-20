@@ -14,7 +14,7 @@ protected:
     ALLEGRO_BITMAP *bg;
 
     vector<Object*> vis_objs;            // an array that stores every pointer of visible objects in the interface
-    int stat;
+    int inter_stat;
 
     virtual int process() = 0;
     virtual void draw();

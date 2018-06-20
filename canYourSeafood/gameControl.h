@@ -11,7 +11,7 @@
 class gameControl
 {
 private:
-    int stat;
+    int ctrl_stat;
     Interface *game_scene;
     ALLEGRO_DISPLAY *display;
 
