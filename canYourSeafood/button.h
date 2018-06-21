@@ -9,13 +9,18 @@
 class ButtonRD:public Object
 {
 private:
+    bool hidden;
+    int button_id;
+    ALLEGRO_BITMAP *pic;
     ALLEGRO_FONT *font;
     string str;
 
 public:
+    ButtonRD(int, int, int, int, const char*);
     ButtonRD(int, int, int);
     ~ButtonRD();
     int click();
+    void toggleHidden();
     void set_str(string);
     void draw() override;
 };

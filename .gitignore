@@ -9,3 +9,10 @@
 *.depend
 *.exe
 *.log
+*.cbp
+*.layout
+*.exe
+*.log
+*.depend
+*.cbp
+*.layout

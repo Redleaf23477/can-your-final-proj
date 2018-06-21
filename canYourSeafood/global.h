@@ -13,7 +13,6 @@ using namespace std;
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>
-#include "./algif/algif.h"
 
 // my macros
 #define pw2(x) ((x)*(x))

@@ -1,7 +1,7 @@
 #include "gifobj.h"
 #define L 0
 #define R 1
-Gifobj::Gifobj(int x, int y, int r,int num_of_picture, int cd, const char *path):Object(x, y, r)
+Gifobj::Gifobj(int x, int y, int r, int wid, int hei, int num_of_picture, int cd, const char *path):Object(x, y, r)
 {
     dir = 0;
     now = 0;
@@ -16,7 +16,7 @@ Gifobj::Gifobj(int x, int y, int r,int num_of_picture, int cd, const char *path)
         SS << path << "/" << i << ".png";
         SS >> P;
         cout<<"load: "<<P<<endl;
-        ALLEGRO_BITMAP* T = load_bitmap_at_size(P.c_str(), 300, 330);
+        ALLEGRO_BITMAP* T = load_bitmap_at_size(P.c_str(), wid, hei);
         GIF.push_back(T);
     }
     cout<<"GIF load finish"<<endl;
@@ -30,7 +30,7 @@ Gifobj::~Gifobj()
 
 void Gifobj::draw()
 {
-    al_draw_bitmap(GIF[now],(float)pos.get_y(), (float)pos.get_y(), 0);
+    al_draw_bitmap(GIF[now],(float)pos.get_x(), (float)pos.get_y(), 0);
 }
 
 void Gifobj::change_dir(){

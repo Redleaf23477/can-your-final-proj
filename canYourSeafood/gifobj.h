@@ -10,8 +10,9 @@ private:
     vector <ALLEGRO_BITMAP*> GIF;
     int dir, now, num;
     int CD;
+
 public:
-    Gifobj(int x, int y, int r, int num_of_picture,int cd, const char* path);
+    Gifobj(int x, int y, int r, int wid, int hei, int num_of_picture,int cd, const char* path);
     void Move();
     void change_dir();
     ~Gifobj();
