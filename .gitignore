@@ -16,3 +16,9 @@
 *.depend
 *.cbp
 *.layout
+*.o
+*.depend
+*.layout
+*.cbp
+*.exe
+*.log
