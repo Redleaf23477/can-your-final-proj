@@ -18,6 +18,7 @@ public:
     Opening(ALLEGRO_DISPLAY*);
     ~Opening();
     int run();
+    void draw();
 };
 
 #endif // OPENING_H
