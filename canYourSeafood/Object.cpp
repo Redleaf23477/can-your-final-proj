@@ -13,14 +13,9 @@ void Object::set_pos(int x, int y)
     pos.set_pos(x, y);
 }
 
-bool Object::mouse_in(const Object *mouse) const
+bool Object::collide(const Object *obj) const
 {
-    return pos.collide(mouse->pos);
-}
-
-int Object::click()
-{
-    return 1;
+    return pos.collide(obj->pos);
 }
 
 void Object::draw()

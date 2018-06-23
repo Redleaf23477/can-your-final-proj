@@ -55,6 +55,9 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 
     txt = new Textbox(WIN_W/2 - 75, WIN_H/2 + 50, 150, 30);
     vis_objs.push_back(txt);
+
+    fish = new Gifobj(300, 10, 50, 300, 330, 18, 5, "../assets/fish/bubble_fish");
+    vis_objs.push_back(fish);
     mouse = new Object(0, 0, 1);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -92,10 +95,10 @@ int Naming::run()
 {
     if(!al_is_event_queue_empty(event_queue))
     {
-        stat = process();
+        inter_stat = process();
         draw();
     }
-    return stat;
+    return inter_stat;
 }
 
 int Naming::process()

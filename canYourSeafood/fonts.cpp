@@ -12,4 +12,8 @@ namespace C
     ALLEGRO_COLOR dark_orange;
     ALLEGRO_COLOR purple;
     ALLEGRO_COLOR blue;
+    ALLEGRO_COLOR brown;
+    ALLEGRO_COLOR gray;
+    ALLEGRO_COLOR red;
+    ALLEGRO_COLOR pink;
 }

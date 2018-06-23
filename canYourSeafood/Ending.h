@@ -9,7 +9,6 @@ class Ending : public Interface
 {
 protected:
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
 
     int process();

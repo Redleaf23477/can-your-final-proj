@@ -9,7 +9,6 @@ class Opening : public Interface
 {
 protected:
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
     ALLEGRO_SAMPLE_INSTANCE *bgm;
     ALLEGRO_SAMPLE *SE;

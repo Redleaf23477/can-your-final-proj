@@ -3,7 +3,7 @@
 
 Ending::Ending(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
-    stat = INTER_CONTINUE;
+    inter_stat = INTER_CONTINUE;
     start_but = new ButtonRD(WIN_W/2, WIN_H/2, 50);
     start_but->set_str("end");
     vis_objs.push_back(start_but);
@@ -23,10 +23,10 @@ int Ending::run()
 {
     if(!al_is_event_queue_empty(event_queue))
     {
-        stat = process();
+        inter_stat = process();
         draw();
     }
-    return stat;
+    return inter_stat;
 }
 
 int Ending::process()
@@ -49,7 +49,7 @@ int Ending::process()
     {
         if(event.mouse.button == 1)
         {
-            if(start_but->mouse_in(mouse)) return INTER_DONE;
+            if(start_but->collide(mouse)) return INTER_DONE;
         }
     }
     return INTER_CONTINUE;

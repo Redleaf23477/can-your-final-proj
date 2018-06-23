@@ -15,6 +15,10 @@ namespace C
     extern ALLEGRO_COLOR dark_orange;
     extern ALLEGRO_COLOR purple;
     extern ALLEGRO_COLOR blue;
+    extern ALLEGRO_COLOR brown;
+    extern ALLEGRO_COLOR gray;
+    extern ALLEGRO_COLOR red;
+    extern ALLEGRO_COLOR pink;
 }
 
 // Fonts class
@@ -31,11 +35,13 @@ class Fonts
 private:
     // ALLEGRO_FONT *fontName_size
     ALLEGRO_FONT *impact_small;
+    ALLEGRO_FONT *bebas_mini;
 
 public:
     Fonts()
     {
         impact_small = NULL;
+        bebas_mini = NULL;
     }
     ~Fonts()
     {
@@ -44,6 +50,7 @@ public:
     {
         dbg << "loading ttf fonts" << endl;
         impact_small = al_load_ttf_font("../assets/font/impact.ttf", 24, 0);
+        bebas_mini = al_load_ttf_font("../assets/font/bebas.ttf", 18, 0);
 
         dbg << "loading color" << endl;
         C::white = al_map_rgb(255, 255, 255);
@@ -52,6 +59,10 @@ public:
         C::dark_orange = al_map_rgb(255, 142, 71);
         C::purple = al_map_rgb(149, 128, 255);
         C::blue = al_map_rgb(77, 129, 179);
+        C::brown = al_map_rgb(108, 56, 21);
+        C::gray = al_map_rgb(100, 100, 100);
+        C::red = al_map_rgb(255, 0, 0);
+        C::pink = al_map_rgb(255, 174, 201);
     }
     void destroy()
     {
@@ -60,6 +71,7 @@ public:
 
     ALLEGRO_FONT* button_txt() { return impact_small; }
     ALLEGRO_FONT* textbox_txt() { return impact_small; }
+    ALLEGRO_FONT* icon_txt() { return bebas_mini; }
 };
 extern Fonts font_lib;
 

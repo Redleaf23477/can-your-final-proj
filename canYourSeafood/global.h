@@ -42,8 +42,11 @@ enum Stat
 };
 
 // load ALLEGRO stuffs
-ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename);
-
+/*
+    ALLEGRO_PLAYMODE_ONCE
+    ALLEGRO_PLAYMODE_LOOP
+*/
+ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename, const ALLEGRO_PLAYMODE);
 ALLEGRO_BITMAP* load_bitmap_at_size(const char *filename, int w, int h);
 
 double angle_radius(double degree);

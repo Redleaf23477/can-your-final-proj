@@ -3,6 +3,7 @@
 
 #include "Interface.h"
 #include "Object.h"
+#include "gifobj.h"
 #include "Button.h"
 #include "textbox.h"
 
@@ -10,11 +11,11 @@ class Naming : public Interface
 {
 protected:
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
     Textbox *txt;
     ALLEGRO_BITMAP* egg;
     ALLEGRO_SAMPLE* SE;
+
 
     int process();
 

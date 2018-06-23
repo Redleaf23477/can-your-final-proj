@@ -89,10 +89,10 @@ int Opening::run()
 {
     if(!al_is_event_queue_empty(event_queue))
     {
-        stat = process();
+        inter_stat = process();
         draw();
     }
-    return stat;
+    return inter_stat;
 }
 
 void Opening::draw(){
