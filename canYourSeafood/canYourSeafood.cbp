@@ -59,6 +59,8 @@
 		<Unit filename="fonts.h" />
 		<Unit filename="gameControl.cpp" />
 		<Unit filename="gameControl.h" />
+		<Unit filename="gifobj.cpp" />
+		<Unit filename="gifobj.h" />
 		<Unit filename="global.cpp" />
 		<Unit filename="global.h" />
 		<Unit filename="main.cpp" />

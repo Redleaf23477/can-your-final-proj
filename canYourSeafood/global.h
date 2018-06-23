@@ -23,6 +23,7 @@ using namespace std;
 #define WIN_W 800
 #define WIN_H 600
 #define FPS 60.0
+#define PI 3.1415926
 
 
 // game status
@@ -44,5 +45,7 @@ enum Stat
 ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename);
 
 ALLEGRO_BITMAP* load_bitmap_at_size(const char *filename, int w, int h);
+
+double angle_radius(double degree);
 
 #endif // GLOBAL_H

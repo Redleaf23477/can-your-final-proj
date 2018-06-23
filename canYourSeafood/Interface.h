@@ -2,6 +2,7 @@
 #define INTERFACE_H
 
 #include "global.h"
+#include "gifobj.h"
 #include "Object.h"
 
 class Interface
