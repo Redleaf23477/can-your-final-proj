@@ -17,6 +17,7 @@ public:
     Gifobj(int x, int y, int r, int wid, int hei, int num_of_picture,int cd, const char* path);
     void Move();
     void change_dir();
+    ALLEGRO_BITMAP* now_pic();
     int get_width() { return width; }
     int get_height() { return height; }
     int get_dir() { return dir; }

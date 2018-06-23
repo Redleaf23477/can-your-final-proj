@@ -1,13 +1,13 @@
 #include "gifobj.h"
 #define L 0
 #define R 1
+
 Gifobj::Gifobj(int x, int y, int r, int wid, int hei, int num_of_picture, int cd, const char *path):Object(x, y, r), center(x+wid/2, y+hei/2, r)
 {
     dir = 0;
     now = 0;
     num = num_of_picture;
     CD = cd;
-
     width = wid, height = hei;
 
     stringstream SS;
@@ -74,3 +74,7 @@ void Gifobj::Move(){
         now = (now + 1)% (num/2);
 }
 
+
+ALLEGRO_BITMAP* Gifobj::now_pic(){
+    return GIF[now];
+}

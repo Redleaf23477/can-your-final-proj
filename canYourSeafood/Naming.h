@@ -13,8 +13,9 @@ protected:
     Object *mouse;
     ButtonRD *start_but;
     Textbox *txt;
-    Gifobj *fish;
-    int nam_stat;
+    ALLEGRO_BITMAP* egg;
+    ALLEGRO_SAMPLE* SE;
+
 
     int process();
 
@@ -22,6 +23,10 @@ public:
     Naming(ALLEGRO_DISPLAY *dis);
     ~Naming();
     int run();
+    void draw();
+
+    void animation();
+    void animation_init();
 };
 
 #endif // NAMING_H

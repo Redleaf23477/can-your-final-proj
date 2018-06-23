@@ -38,3 +38,8 @@ ALLEGRO_BITMAP* load_bitmap_at_size(const char *filename, int w, int h)
 
     return resized_bmp;
 }
+
+double angle_radius(double degree){
+    return PI * degree / 180.0;
+}
+
