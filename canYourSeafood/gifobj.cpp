@@ -41,6 +41,12 @@ bool Gifobj::collide(Object *obj)
     return center.collide(objpos);
 }
 
+bool Gifobj::rotate_collide(Object *obj)
+{
+    Circle objpos = obj->get_pos();
+    return pos.collide(objpos);
+}
+
 void Gifobj::set_pos(int x, int y)
 {
     pos.set_pos(x, y);

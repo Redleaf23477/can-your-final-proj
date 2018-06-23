@@ -43,7 +43,7 @@ void Naming::animation_init(){
 
 Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
-    stat = INTER_CONTINUE;
+    inter_stat = INTER_CONTINUE;
 
     egg = load_bitmap_at_size("../assets/fish/egg.png",300,300);
     SE = al_load_sample( "../assets/music/Dolphin.wav" );
@@ -56,8 +56,6 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
     txt = new Textbox(WIN_W/2 - 75, WIN_H/2 + 50, 150, 30);
     vis_objs.push_back(txt);
 
-    fish = new Gifobj(300, 10, 50, 300, 330, 18, 5, "../assets/fish/bubble_fish");
-    vis_objs.push_back(fish);
     mouse = new Object(0, 0, 1);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -72,7 +70,7 @@ Naming::~Naming()
 }
 
 void Naming::draw(){
-    static double angle = 0;
+//    static double angle = 0;
     al_clear_to_color( C::dark_orange );
 
     /*
@@ -122,7 +120,7 @@ int Naming::process()
     {
         if(event.mouse.button == 1)
         {
-            if(start_but->mouse_in(mouse)) return INTER_DONE;
+            if(start_but->collide(mouse)) return INTER_DONE;
 
             if(EA::inRange(event.mouse.x, EA::pos[0] - al_get_bitmap_width(egg)*3/8, EA::pos[0] + al_get_bitmap_width(egg)*3/8) &&
                EA::inRange(event.mouse.y, EA::pos[1] - al_get_bitmap_height(egg)*2/5, EA::pos[1] + al_get_bitmap_height(egg)*2/5) )

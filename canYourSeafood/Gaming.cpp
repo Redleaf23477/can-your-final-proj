@@ -237,7 +237,7 @@ int Gaming::process_game()
         }
         else if(event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN && event.mouse.button == 1)
         {
-            ball->set_v(-ball->get_vx(), -ball->get_vy());
+            if(ball->collide(mouse)) ball->set_v(-ball->get_vx(), -ball->get_vy());
         }
     }
     else if(game_stat == GAM_TOUCH)

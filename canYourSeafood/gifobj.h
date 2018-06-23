@@ -24,6 +24,7 @@ public:
     Circle get_center() { return center; }
     void set_pos(int, int);
     bool collide(Object*);
+    bool rotate_collide(Object*);
     void move_toward(Circle);
     ~Gifobj();
     void draw();

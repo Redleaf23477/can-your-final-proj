@@ -1,9 +1,10 @@
-./canYourSeafood/bin/
-./canYourSeafood/obj/
-./canYourSeafood/allegro-5.0.10-mingw-4.7.0/
+canYourSeafood/bin/
+canYourSeafood/obj/
+/canYourSeafood/allegro-5.0.10-mingw-4.7.0/
 *.o
 *.depend
 *.exe
 *.log
 *.cbp
 *.layout
+*.dll
