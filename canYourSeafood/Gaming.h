@@ -14,6 +14,7 @@ enum GamStat
     GAM_BALL,
     GAM_TOUCH,
     GAM_BIKE,
+    GAM_CUT,
 
     ACC_BELT,
     ACC_HAT,
@@ -69,16 +70,45 @@ public:
     void draw() override;
 };
 
+class Ball : public Object
+{
+private:
+    bool hidden;
+    int cd, CD;
+    int idx, pic_num;
+    int vx, vy, g;
+    Circle center;
+    vector<ALLEGRO_BITMAP*> PIC;
+    ALLEGRO_BITMAP *toDraw;
+
+public:
+    Ball(int, int, int, int, const char*);
+    ~Ball();
+    int get_vx() { return vx; }
+    int get_vy() { return vy; }
+    bool isHidden() { return hidden; }
+    Circle get_center() { return center; }
+    void set_v(int x, int y);
+    void set_pos(int x, int y);
+    void toggleHidden();
+    bool collide(Object*);
+    bool Move();
+    void click();
+    void draw() override;
+};
+
 class Gaming : public Interface
 {
 protected:
     int game_stat;
     ALLEGRO_SAMPLE_INSTANCE *bgm;
+    bool grab;
+    ALLEGRO_BITMAP *mouse_touch, *mouse_grab;
+    ALLEGRO_MOUSE_CURSOR *cursor_touch, *cursor_grab;
     Object *mouse;
     VerticalBar *belly, *happy;
-    ButtonRD *start_but;
     Menu *menu;
-    ButtonRD *clothes, *feed, *ball, *touch, *bicycle, *rod;
+    ButtonRD *but_clothes, *but_feed, *but_ball, *but_touch, *but_bicycle, *but_rod;
     vector<ButtonRD*> control_buttons;
     Menu *accessory;
     ButtonRD *but_belt, *but_hat, *but_glass;
@@ -87,6 +117,8 @@ protected:
     Object *fishfeed;
     Accessory *belt, *hat, *glass;
     Gifobj *fish;
+    Ball *ball;
+    int dropv;
     int bellycd;
 
     int process();
