@@ -13,7 +13,27 @@ enum GamStat
     GAM_FEED,
     GAM_BALL,
     GAM_TOUCH,
-    GAM_BIKE
+    GAM_BIKE,
+
+    ACC_BELT,
+    ACC_HAT,
+    ACC_GLASS
+};
+
+class Accessory : public Object
+{
+private:
+    bool hidden;
+    float ratio_x, ratio_y;
+    int width, height;
+    ALLEGRO_BITMAP *pic_left, *pic_right, *toDraw;
+
+public:
+    Accessory(int, int, int, float, float, const char *);
+    ~Accessory();
+    void toggleHidden();
+    void update(Circle, int, int, int);
+    void draw() override;
 };
 
 class Menu : public Object
@@ -59,8 +79,15 @@ protected:
     ButtonRD *start_but;
     Menu *menu;
     ButtonRD *clothes, *feed, *ball, *touch, *bicycle, *rod;
-    vector<ButtonRD*> buttons;
+    vector<ButtonRD*> control_buttons;
+    Menu *accessory;
+    ButtonRD *but_belt, *but_hat, *but_glass;
+    vector<ButtonRD*> accessory_buttons;
+    Circle fish_goto;
+    Object *fishfeed;
+    Accessory *belt, *hat, *glass;
     Gifobj *fish;
+    int bellycd;
 
     int process();
     int process_game();

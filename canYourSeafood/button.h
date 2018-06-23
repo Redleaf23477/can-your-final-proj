@@ -18,12 +18,13 @@ private:
     string str;
 
 public:
-    ButtonRD(int, int, int, int, const char*);
+    ButtonRD(int, int, int, bool, int, const char*);
     ButtonRD(int, int, int);
     ~ButtonRD();
     int click();
     void alert_chgCol();
     bool isHidden() { return hidden; }
+    bool isAlert() { return alert; }
     void toggleHidden();
     void set_str(string);
     void draw() override;

@@ -12,8 +12,9 @@ protected:
 public:
     Object(int, int, int);
     virtual ~Object();
-    void set_pos(int, int);
-    virtual bool mouse_in(const Object*) const;  // detect if mouse touch the object
+    Circle get_pos() { return pos; }
+    virtual void set_pos(int, int);
+    virtual bool collide(const Object*) const;  // detect if mouse touch the object
     virtual void draw();
 };
 

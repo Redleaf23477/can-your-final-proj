@@ -1,8 +1,8 @@
 #include "button.h"
 
-ButtonRD::ButtonRD(int x, int y, int r, int id, const char *path):Object(x, y, r)
+ButtonRD::ButtonRD(int x, int y, int r, bool hid, int id, const char *path):Object(x, y, r)
 {
-    hidden = true;
+    hidden = hid;
     alert = false;
     button_id = id;
     font = font_lib.button_txt();
