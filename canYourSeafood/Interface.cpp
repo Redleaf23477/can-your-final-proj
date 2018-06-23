@@ -8,6 +8,7 @@ Interface::Interface(ALLEGRO_DISPLAY *dis):display(dis)
     event_queue = al_create_event_queue();
     timer = al_create_timer(1.0/FPS);
 
+    srand(time(NULL)+7122);
     al_start_timer(timer);
 }
 

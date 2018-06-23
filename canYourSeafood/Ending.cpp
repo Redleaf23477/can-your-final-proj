@@ -49,7 +49,7 @@ int Ending::process()
     {
         if(event.mouse.button == 1)
         {
-            if(start_but->mouse_in(mouse)) return INTER_DONE;
+            if(start_but->collide(mouse)) return INTER_DONE;
         }
     }
     return INTER_CONTINUE;
