@@ -34,6 +34,7 @@ EndingObj::EndingObj(int x, int y, int r, ALLEGRO_BITMAP *img, int _kind):Object
     case FISH_MEAT:
         vx = 0;
         vy = 0;
+        angle = 0;
         hidden = true;
         break;
     case LIGHT:
@@ -134,12 +135,14 @@ void EndingObj::draw()
                                        al_get_bitmap_width(pic)/2, al_get_bitmap_height(pic)/2,
                                        pos.get_x(), pos.get_y(),
                                        angle_radius(angle), 0);
+                                       //cout<<angle<<endl;
             }
             else if(rotate_l){
                 al_draw_rotated_bitmap(pic,
                                        al_get_bitmap_width(pic)/2, al_get_bitmap_height(pic)/2,
                                        pos.get_x(), pos.get_y(),
                                        -angle_radius(angle), 0);
+                                       //cout<<angle<<endl;
             }
         }
         else if(kind == BIKE && rotate_r){

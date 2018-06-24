@@ -3,10 +3,12 @@
 Ending::Ending(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     inter_stat = INTER_CONTINUE;
-    start_but = new ButtonRD(WIN_W/2, WIN_H/2, 50);
-    start_but->set_str("end");
+    start_but = new ButtonRD(WIN_W*0.86, WIN_H*0.8, 50);
+    start_but->set_str("EXIT");
     vis_objs.push_back(start_but);
+    //start_but->toggleHidden();
     mouse = new Object(0, 0, 1);
+    vis_objs.push_back(mouse);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_mouse_event_source());
@@ -17,7 +19,7 @@ Ending::Ending(ALLEGRO_DISPLAY *dis):Interface(dis)
     blood_sound[0] = al_load_sample("../assets/end/music/blood1.wav");
     blood_sound[1] = al_load_sample("../assets/end/music/blood2.wav");
     screaming = al_load_sample("../assets/end/music/scream.wav");
-    //trumpet = al_load_sample("");
+    dead = al_load_sample("../assets/end/music/dead.wav");
     lightUP_sound = al_load_sample("../assets/end/music/switch2.wav");
     ai_chi_wei = al_load_sample("../assets/end/music/ai_chi_wei.wav");
     //ED = load_bgm("");
@@ -58,12 +60,97 @@ Ending::Ending(ALLEGRO_DISPLAY *dis):Interface(dis)
 
     bike = new EndingObj(WIN_W/2, WIN_H/2, 1, load_bitmap_at_size("../assets/button/machine.png", 714*0.5, 536*0.5), BIKE);
     vis_obj_ending.push_back(bike);
+
+    set_StaffList();
+}
+
+void Ending::set_StaffList(){
+    string title[10] = {"Team Leader", "CheerLeader", "Spiritual Leader", "Opening", "Naming", "Gaming", "Ending",
+                        "GameControl & ProjectManager", "Animation & GraphicDesigner", "SoundEffect & MusicDirector"};
+    string name[4] = {"Redleaf23477", "Yung-Chih", "yckai2679", "SeaFood(Yung-Chih)"};
+    int w_front = WIN_W*0.5;
+    int w_back = w_front + 50;
+    int h_past = WIN_H + 50;
+    int dis_l = 300;
+    int dis_s = 125;
+
+    list_title[0] = new Textbox(w_front, h_past, 0, 0);  // TEAM LEADER
+    list_name[0] = new Textbox(w_back, h_past + 45, 0, 0);
+    list_title[0]->set_txt(title[0]);
+    list_name[0]->set_txt(name[0]);
+    list_title[1] = new Textbox(w_front, h_past + dis_l, 0, 0);  // CHEERLEADER
+    list_name[1] = new Textbox(w_back, h_past + dis_l + 45, 0, 0);
+    list_title[1]->set_txt(title[1]);
+    list_name[1]->set_txt(name[2]);
+    h_past += dis_l;
+    list_title[2] = new Textbox(w_front, h_past + dis_s, 0, 0);  // SPIRITUAL LEADER
+    list_name[2] = new Textbox(w_back, h_past + dis_s + 45, 0, 0);
+    list_title[2]->set_txt(title[2]);
+    list_name[2]->set_txt(name[3]);
+    h_past += (dis_s + dis_l);
+    for(int i = 3; i < 7; i++){  // Opening, Naming, Gaming, Ending
+        if(i == 3){
+            list_title[i] = new Textbox(w_front, h_past, 0, 0);
+            list_title[i]->set_txt("Opening");
+            //cout << i << " " << title[i] <<endl;
+            list_name[i] = new Textbox(w_back, h_past + 45, 0, 0);
+            list_name[i]->set_txt(name[0]);
+        }
+        else{
+            list_title[i] = new Textbox(w_front, h_past + dis_s, 0, 0);
+            list_title[i]->set_txt(title[i]);
+            //cout << i << " " << title[i] <<endl;
+            list_name[i] = new Textbox(w_back, h_past + dis_s + 45, 0, 0);
+            h_past += dis_s;
+        }
+    }
+    list_name[4]->set_txt(name[1]);
+    list_name[5]->set_txt(name[0]);
+    list_name[6]->set_txt(name[2]);
+
+    h_past += dis_l;
+    for(int i = 7; i < 10; i++){
+        if(i == 7){
+            list_title[i] = new Textbox(w_front, h_past, 0, 0);
+            list_title[i]->set_txt("GameControl & ProjectManager");
+            list_name[i] = new Textbox(w_back, h_past + 45, 0, 0);
+            list_name[i]->set_txt(name[0]);
+        }
+        else{
+            list_title[i] = new Textbox(w_front, h_past + dis_s, 0, 0);
+            list_title[i]->set_txt(title[i]);
+            //cout << i << " " << title[i] <<endl;
+            list_name[i] = new Textbox(w_back, h_past + dis_s + 45, 0, 0);
+            list_name[i]->set_txt(name[1] + ", " + name[2]);
+            h_past += dis_s;
+        }
+    }
+
+    for(int i = 0; i < 10; i++){
+        txtboxes.push_back(list_title[i]);
+        list_title[i]->set_txt_color(al_map_rgb(255, 255, 255));
+        list_title[i]->set_font(font_lib.ending_txt_b());
+        txtboxes.push_back(list_name[i]);
+        list_name[i]->set_txt_color(al_map_rgb(255, 255, 255));
+        list_name[i]->set_font(font_lib.ending_txt_s());
+    }
 }
 
 Ending::~Ending()
 {
-    delete mouse;
-    delete start_but;
+    for(auto p : vis_objs){
+        delete p;
+    }
+    for(auto p : vis_obj_ending){
+        delete p;
+    }
+    for(auto p : txtboxes){
+        delete p;
+    }
+    vis_objs.clear();
+    vis_obj_ending.clear();
+    txtboxes.clear();
+    cout<<"Ending killed successfully"<<endl;
 }
 
 int Ending::run()
@@ -81,7 +168,7 @@ void Ending::update(){
     if(!bike->hidden && bike->get_angle() >= 180){
         passing_counter++;
         bike->set_vangle(0);
-        cout << passing_counter << endl;
+        //cout << passing_counter << endl;
         if(passing_counter >= 30){
             bike->hidden = true;
             fish->hidden = false;
@@ -148,6 +235,11 @@ void Ending::update(){
                 fish_meat[i]->set_speed(0, (-blood_count+26)/2);
             }
             else{
+                if(blood_count == 39 && !dead_played){
+                    al_play_sample(dead, 2.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
+                    dead_played = true;
+                    //cout<<"dead_playing"<<endl;
+                }
                 fish_meat[i]->set_speed(0, 0);
                 fish_meat[i]->set_gravity(0);
             }
@@ -156,8 +248,8 @@ void Ending::update(){
 
     if(machine->get_posy()+al_get_bitmap_height(machine->get_pic())/2 < 0)
         passing_counter++;
-    if(passing_counter == 120){
-        cout<<"drop";
+    if(passing_counter == 330){
+        //cout<<"drop";
         for(int i = 0; i < numOfFishMeat; i++){
             fish_meat[i]->set_speed(0, 1);
             fish_meat[i]->set_gravity(GRAVITY_END+3);
@@ -174,18 +266,34 @@ void Ending::update(){
 
     light->update();
     can->update();
-    if(passing_counter == 240){
+    if(passing_counter == 450){
         al_play_sample(lightUP_sound, 3.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
     }
-    if(passing_counter == 245){
+    if(passing_counter == 455){
         light->hidden = false;
         can->hidden = false;
     }
-    if(passing_counter == 300)
+    if(passing_counter == 510)
         al_play_sample(ai_chi_wei, 2.5, 0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
-    /*if(passing_counter == 420){
-        al_play_sample_instance(ED);
-    }*/
+    if(passing_counter == 630){
+        v_list = 1;
+        //al_play_sample_instance(ED);
+    }
+    if(passing_counter == 3000){
+        draw_slogan1 = true;
+    }
+    if(passing_counter == 3060){
+        draw_slogan2 = true;
+    }
+    if(passing_counter == 3120){
+        draw_but = true;
+        //start_but->toggleHidden();
+    }
+
+    for(int i = 0; i < 10; i++){
+        list_title[i]->set_pos(list_title[i]->get_posx(), list_title[i]->get_posy() - v_list);
+        list_name[i]->set_pos(list_name[i]->get_posx(), list_name[i]->get_posy() - v_list);
+    }
 
 }
 
@@ -217,14 +325,46 @@ void Ending::draw(){
         al_draw_bitmap(blood[1], 0, 0, 0);
     case 1:
         al_draw_bitmap(blood[0], 80, 0, 0);
+        if(blood_mode <= 4)
+            red_filter_cd--;
     case 0:
         break;
     default:
         break;
     }
 
+    if(red_filter_cd == 0){
+        red_filter_cd = rand()%51+30;
+        red_filter = true;
+    }
+    if(red_filter){
+        if(red_filter_last == 0){
+            red_filter_last = 5;
+            red_filter = false;
+        }
+        al_draw_filled_rectangle(0, 0, WIN_W, WIN_H, al_map_rgba(128, 0, 0, 40));
+        red_filter_last--;
+    }
+
     light->draw();
     can->draw();
+
+    for(int i = 0; i < 10; i++){
+        list_title[i]->draw_for_ending();
+        list_name[i]->draw_for_ending();
+    }
+    if(v_list == 1){
+        al_draw_filled_rectangle(WIN_W/2, WIN_H-50, WIN_W, WIN_H, C::black);
+        al_draw_filled_rectangle(WIN_W/2, 0, WIN_W, 50, C::black);
+    }
+    if(draw_slogan1){
+        al_draw_text(font_lib.get_ending_slogan1(), C::white, WIN_W*0.75, WIN_H*0.3, ALLEGRO_ALIGN_CENTER, "CAN");
+    }
+    if(draw_slogan2){
+        al_draw_text(font_lib.get_ending_slogan2(), C::white, WIN_W*0.75, WIN_H*0.4, ALLEGRO_ALIGN_CENTER, "Your SeaFood");
+    }
+    if(draw_but)
+        start_but->draw();
 
     //========== ADDING TEXTBOX ==========//
 
@@ -242,18 +382,18 @@ int Ending::process()
     {
         update();
         al_flip_display();
-        cout << bike->get_angle() << endl;
+        //cout << bike->get_angle() << endl;
     }
     else if(event.type == ALLEGRO_EVENT_MOUSE_AXES)
     {
         mouse->set_pos(event.mouse.x, event.mouse.y);
     }
-    /*else if(event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
+    else if(event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
     {
-        if(event.mouse.button == 1)
+        if(event.mouse.button == 1 && draw_but)
         {
             if(start_but->collide(mouse)) return INTER_DONE;
         }
-    }*/
+    }
     return INTER_CONTINUE;
 }

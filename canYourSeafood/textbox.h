@@ -20,6 +20,12 @@ public:
     string get_txt() { return str; }
     void run(ALLEGRO_EVENT);
     void draw();
+    void draw_for_ending();
+    void set_txt(string s){ str = s; };
+    void set_txt_color(ALLEGRO_COLOR color) { txt_col = color; };
+    void set_font(ALLEGRO_FONT* f){ font = f; }
+    int get_posy(){ return pos.get_y(); };
+    int get_posx(){ return pos.get_x(); };
 };
 
 #endif // TEXTBOX_H

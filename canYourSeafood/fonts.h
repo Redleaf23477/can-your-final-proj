@@ -37,6 +37,8 @@ private:
     ALLEGRO_FONT *impact_small;
     ALLEGRO_FONT *ending_small;
     ALLEGRO_FONT *ending_big;
+    ALLEGRO_FONT *ending_slogan1;
+    ALLEGRO_FONT *ending_slogan2;
     ALLEGRO_FONT *bebas_mini;
 
 public:
@@ -54,8 +56,10 @@ public:
     {
         dbg << "loading ttf fonts" << endl;
         impact_small = al_load_ttf_font("../assets/font/impact.ttf", 24, 0);
-        ending_small = al_load_ttf_font("../assets/font/impact.ttf", 24, 0);
-        ending_big = al_load_ttf_font("../assets/font/impact.ttf", 48, 0);
+        ending_small = al_load_ttf_font("../assets/font/Caviar_Dreams_Bold.ttf", 20, 0);
+        ending_big = al_load_ttf_font("../assets/font/Berlin Sans FB Demi Bold.ttf", 27, 0);
+        ending_slogan1 = al_load_ttf_font("../assets/font/Berlin Sans FB Demi Bold.ttf", 48, 0);
+        ending_slogan2 = al_load_ttf_font("../assets/font/Berlin Sans FB Demi Bold.ttf", 40, 0);
         cout << "ttf fonts loaded" << endl;
 
         bebas_mini = al_load_ttf_font("../assets/font/bebas.ttf", 18, 0);
@@ -82,6 +86,8 @@ public:
     ALLEGRO_FONT* button_txt() { return impact_small; }
     ALLEGRO_FONT* ending_txt_s() { return ending_small; }
     ALLEGRO_FONT* ending_txt_b() { return ending_big; }
+    ALLEGRO_FONT* get_ending_slogan1() { return ending_slogan1; }
+    ALLEGRO_FONT* get_ending_slogan2() { return ending_slogan2; }
     ALLEGRO_FONT* textbox_txt() { return impact_small; }
     ALLEGRO_FONT* icon_txt() { return bebas_mini; }
 };
