@@ -9,9 +9,12 @@ Ending::Ending(ALLEGRO_DISPLAY *dis):Interface(dis)
     //start_but->toggleHidden();
     mouse = new Object(0, 0, 1);
     vis_objs.push_back(mouse);
+    light_area = new Object(200, 50, 10);
+    vis_objs.push_back(light_area);
 
     al_register_event_source(event_queue, al_get_display_event_source(display));
     al_register_event_source(event_queue, al_get_mouse_event_source());
+    al_register_event_source(event_queue, al_get_keyboard_event_source());
     al_register_event_source(event_queue, al_get_timer_event_source(timer));
 
     al_reserve_samples(10);
@@ -22,7 +25,10 @@ Ending::Ending(ALLEGRO_DISPLAY *dis):Interface(dis)
     dead = al_load_sample("../assets/end/music/dead.wav");
     lightUP_sound = al_load_sample("../assets/end/music/switch2.wav");
     ai_chi_wei = al_load_sample("../assets/end/music/ai_chi_wei.wav");
-    //ED = load_bgm("");
+    play_light = al_load_sample("../assets/end/music/play_light.wav");
+    ED = load_bgm("../assets/end/music/pokemon.wav", ALLEGRO_PLAYMODE_LOOP);
+    ED2 = load_bgm("../assets/end/music/seafood.wav", ALLEGRO_PLAYMODE_LOOP);
+    //al_set_sample_instance_gain(ED2, 1.0);
 
     img_fish_meat[0] = load_bitmap_at_size("../assets/end/meat/fish1.png", 50, 50);
     img_fish_meat[1] = load_bitmap_at_size("../assets/end/meat/fish2.png", 80, 80);
@@ -164,6 +170,8 @@ int Ending::run()
 }
 
 void Ending::update(){
+    if(txtbox_can != NULL)
+        txtbox_can->set_pos(205, 480);  // TBR
     // update all EndingObjs
     if(!bike->hidden && bike->get_angle() >= 180){
         passing_counter++;
@@ -277,7 +285,17 @@ void Ending::update(){
         al_play_sample(ai_chi_wei, 2.5, 0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
     if(passing_counter == 630){
         v_list = 1;
-        //al_play_sample_instance(ED);
+    }
+    if(passing_counter == 670){
+        al_play_sample_instance(ED);
+    }
+    if(play_ED2){
+        play_ED2 = false;
+        al_stop_sample_instance(ED);
+        if(!al_get_sample_instance_playing(ED2)){
+            al_play_sample_instance(ED2);
+            cout<<"ED2"<<endl;
+        }
     }
     if(passing_counter == 3000){
         draw_slogan1 = true;
@@ -349,6 +367,14 @@ void Ending::draw(){
     light->draw();
     can->draw();
 
+    if(play_se){
+        al_play_sample(play_light, 1.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE, 0);
+        play_se = false;
+    }
+
+    if(!can->hidden && txtbox_can != NULL)
+        txtbox_can->draw();
+
     for(int i = 0; i < 10; i++){
         list_title[i]->draw_for_ending();
         list_name[i]->draw_for_ending();
@@ -390,9 +416,30 @@ int Ending::process()
     }
     else if(event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN)
     {
-        if(event.mouse.button == 1 && draw_but)
+        if(event.mouse.button == 1)
         {
-            if(start_but->collide(mouse)) return INTER_DONE;
+            if(draw_but){
+                if(start_but->collide(mouse)) return INTER_DONE;
+            }
+            else if(passing_counter > 700 && light_area->collide(mouse) && !play_light_effect){
+                play_light_effect = true;
+                light->hidden ^= 1;
+                can->hidden ^= 1;
+                cout<<"click off"<<endl;
+            }
+            else if(passing_counter > 700 && light_area->collide(mouse) && play_light_effect){
+                play_se = true;
+                play_light_effect = false;
+                light->hidden ^= 1;
+                can->hidden ^= 1;
+                cout<<"click on"<<endl;
+            }
+        }
+    }
+    else if(event.type == ALLEGRO_EVENT_KEY_DOWN){
+        if(event.keyboard.keycode == ALLEGRO_KEY_H && passing_counter >= 900){
+            cout<<"press h"<<endl;
+            play_ED2 = true;
         }
     }
     return INTER_CONTINUE;
