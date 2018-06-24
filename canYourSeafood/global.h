@@ -23,7 +23,9 @@ using namespace std;
 #define WIN_W 800
 #define WIN_H 600
 #define FPS 60.0
+#define PI 3.1415926
 
+#include "fonts.h"
 
 // game status
 enum Stat
@@ -40,9 +42,14 @@ enum Stat
     INTER_EXIT
 };
 
-// fonts library
-#include "fonts.h"
+// load ALLEGRO stuffs
+ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename);
+
+ALLEGRO_BITMAP* load_bitmap_at_size(const char *filename, int w, int h);
+
+double angle_radius(double degree);
+
 extern Fonts font_lib;
 
-
 #endif // GLOBAL_H
+

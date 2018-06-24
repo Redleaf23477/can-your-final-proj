@@ -18,7 +18,7 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-monolith-mt-debug.a" />
+					<Add library="allegro-5.0.10-mingw-4.7.0/lib/liballegro-5.0.10-monolith-mt-debug.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -31,7 +31,7 @@
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-					<Add library="allegro-5.0.10-mingw-4.7.0\lib\liballegro-5.0.10-monolith-mt.a" />
+					<Add library="allegro-5.0.10-mingw-4.7.0/lib/liballegro-5.0.10-monolith-mt.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -41,16 +41,26 @@
 		</Compiler>
 		<Unit filename="Circle.cpp" />
 		<Unit filename="Circle.h" />
+		<Unit filename="Ending.cpp" />
+		<Unit filename="Ending.h" />
+		<Unit filename="EndingObj.cpp" />
+		<Unit filename="EndingObj.h" />
+		<Unit filename="Gaming.cpp" />
+		<Unit filename="Gaming.h" />
 		<Unit filename="Interface.cpp" />
 		<Unit filename="Interface.h" />
+		<Unit filename="Naming.cpp" />
+		<Unit filename="Naming.h" />
+		<Unit filename="Object.cpp" />
 		<Unit filename="Object.h" />
 		<Unit filename="Opening.cpp" />
 		<Unit filename="Opening.h" />
-		<Unit filename="Opject.cpp" />
 		<Unit filename="button.cpp" />
 		<Unit filename="button.h" />
+		<Unit filename="fonts.h" />
 		<Unit filename="gameControl.cpp" />
 		<Unit filename="gameControl.h" />
+		<Unit filename="global.cpp" />
 		<Unit filename="global.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
