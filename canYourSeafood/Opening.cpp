@@ -46,9 +46,6 @@ Opening::Opening(ALLEGRO_DISPLAY *dis):Interface(dis)
 {
     inter_stat = INTER_CONTINUE;
 
-    bgm = load_bgm("../assets/music/ocean.ogg", ALLEGRO_PLAYMODE_LOOP);
-    al_play_sample_instance( bgm );
-
     SE = al_load_sample( "../assets/music/Dolphin.wav" );
 
     bg = load_bitmap_at_size("../assets/background/Opening.png",WIN_W,WIN_H);
@@ -77,12 +74,12 @@ Opening::Opening(ALLEGRO_DISPLAY *dis):Interface(dis)
 
 Opening::~Opening()
 {
-    al_stop_sample_instance( bgm );
+    //al_stop_sample_instance( bgm );
     delete mouse;
     if(fish1) delete fish1;
     if(fish2) delete fish2;
     if(SE) al_destroy_sample(SE);
-    if(bgm) al_destroy_sample_instance(bgm);
+    //if(bgm) al_destroy_sample_instance(bgm);
 }
 
 int Opening::run()
@@ -150,15 +147,18 @@ int Opening::process()
 
         if(event.mouse.button == 1)
         {
-            if(start_but->collide(mouse))
-                return INTER_DONE;
 
             if(fish1->rotate_collide(mouse))
                 FA::play = true;
+
             if(fish2->rotate_collide(mouse))
                 al_play_sample(SE, 2.5, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
-        }
+            else
+                al_play_sample(click, 2.5, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
 
+            if(start_but->collide(mouse))
+                return INTER_DONE;
+        }
         if(event.mouse.button == 2)
         {
             FA::play = false;

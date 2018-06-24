@@ -13,6 +13,7 @@ protected:
     ALLEGRO_DISPLAY *display;
     ALLEGRO_TIMER *timer;
     ALLEGRO_BITMAP *bg;
+    ALLEGRO_SAMPLE *click;
 
     vector<Object*> vis_objs;            // an array that stores every pointer of visible objects in the interface
     int inter_stat;

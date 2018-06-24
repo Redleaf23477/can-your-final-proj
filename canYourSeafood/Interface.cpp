@@ -5,6 +5,7 @@
 Interface::Interface(ALLEGRO_DISPLAY *dis):display(dis)
 {
     bg = NULL;
+    click = al_load_sample( "../assets/music/click.wav" );
     event_queue = al_create_event_queue();
     timer = al_create_timer(1.0/FPS);
 
@@ -18,6 +19,7 @@ Interface::~Interface()
     if(bg) al_destroy_bitmap(bg);
     al_destroy_event_queue(event_queue);
     al_destroy_timer(timer);
+    if(click) al_destroy_sample(click);
 
     for(auto &obj:vis_objs) delete obj;
 }

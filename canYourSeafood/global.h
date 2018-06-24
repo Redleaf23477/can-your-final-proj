@@ -52,5 +52,6 @@ ALLEGRO_BITMAP* load_bitmap_at_size(const char *filename, int w, int h);
 
 double angle_radius(double degree);
 
+extern string NAME;
 #endif // GLOBAL_H
 

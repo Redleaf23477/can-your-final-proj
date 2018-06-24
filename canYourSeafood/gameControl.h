@@ -14,6 +14,7 @@ private:
     int ctrl_stat;
     Interface *game_scene;
     ALLEGRO_DISPLAY *display;
+    ALLEGRO_SAMPLE_INSTANCE *ocean;
 
     void allegro_init();
     void game_init();

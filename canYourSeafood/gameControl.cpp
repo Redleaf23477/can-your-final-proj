@@ -5,6 +5,7 @@ gameControl::gameControl()
     ctrl_stat = STAT_INIT;
     game_scene = NULL;
     display = NULL;
+    ocean = NULL;
     srand(time(NULL));
 }
 
@@ -71,6 +72,8 @@ void gameControl::game_init()
     display = al_create_display(WIN_W, WIN_H);
     game_scene = new Opening(display);
     ctrl_stat = STAT_OPENING;
+    ocean = load_bgm("../assets/music/ocean.ogg", ALLEGRO_PLAYMODE_LOOP);
+    al_play_sample_instance(ocean);
 }
 
 void gameControl::game_run()
@@ -84,7 +87,7 @@ void gameControl::game_run()
         {
         case STAT_OPENING: ctrl_stat = STAT_NAMING; game_scene = new Naming(display); break;
         case STAT_NAMING:  ctrl_stat = STAT_GAMING; game_scene = new Gaming(display); break;
-        case STAT_GAMING:  ctrl_stat = STAT_ENDING; game_scene = new Ending(display); break;
+        case STAT_GAMING:  ctrl_stat = STAT_ENDING; game_scene = new Ending(display); al_stop_sample_instance(ocean); break;
         case STAT_ENDING:  ctrl_stat = STAT_EXIT; game_scene = NULL; break;
         default:
             dbg << "!! Unknown stat=" << ctrl_stat << " !!" << endl;
@@ -102,4 +105,7 @@ void gameControl::game_destroy()
 {
     al_destroy_display(display);
     font_lib.destroy();
+    al_stop_sample_instance( ocean );
+    if(ocean)
+        al_destroy_sample_instance( ocean );
 }

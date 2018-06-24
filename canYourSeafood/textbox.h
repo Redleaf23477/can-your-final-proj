@@ -18,6 +18,8 @@ public:
     Textbox(int, int, int, int);
     ~Textbox();
     string get_txt() { return str; }
+    void set_txt(string s){ str = s; };
+    void set_txt_color(ALLEGRO_COLOR color) { txt_col = color; };
     void run(ALLEGRO_EVENT);
     void draw();
 };

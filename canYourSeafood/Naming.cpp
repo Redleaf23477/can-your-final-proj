@@ -1,4 +1,5 @@
 #include "Naming.h"
+#include "global.h"
 namespace EA{
     double angle = 0;
     double range = 8;
@@ -47,6 +48,7 @@ Naming::Naming(ALLEGRO_DISPLAY *dis):Interface(dis)
 
     egg = load_bitmap_at_size("../assets/fish/egg.png",300,300);
     SE = al_load_sample( "../assets/music/Dolphin.wav" );
+    click = al_load_sample( "../assets/music/click.wav" );
     bg = load_bitmap_at_size( "../assets/background/Naming.jpg", WIN_W, WIN_H );
 
     start_but = new ButtonRD(WIN_W/2, WIN_H - 150, 40);
@@ -70,14 +72,8 @@ Naming::~Naming()
 }
 
 void Naming::draw(){
-//    static double angle = 0;
     al_clear_to_color( C::dark_orange );
 
-    /*
-    al_draw_filled_rectangle
-    ( EA::pos[0] - al_get_bitmap_width(egg)*3/8, EA::pos[1] - al_get_bitmap_height(egg)*2/5,
-      EA::pos[0] + al_get_bitmap_width(egg)*3/8, EA::pos[1] + al_get_bitmap_height(egg)*2/5, C::black);
-    */
     if(bg)al_draw_bitmap(bg, 0, 0, 0);
 
     al_draw_rotated_bitmap
@@ -120,7 +116,6 @@ int Naming::process()
     {
         if(event.mouse.button == 1)
         {
-            if(start_but->collide(mouse)) return INTER_DONE;
 
             if(EA::inRange(event.mouse.x, EA::pos[0] - al_get_bitmap_width(egg)*3/8, EA::pos[0] + al_get_bitmap_width(egg)*3/8) &&
                EA::inRange(event.mouse.y, EA::pos[1] - al_get_bitmap_height(egg)*2/5, EA::pos[1] + al_get_bitmap_height(egg)*2/5) )
@@ -128,11 +123,16 @@ int Naming::process()
                    EA::state = 0;
                    al_play_sample(SE, 2.5, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
                }
+            else
+                al_play_sample(click, 1.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
+            if(start_but->collide(mouse)) return INTER_DONE;
         }
     }
     else if(event.type == ALLEGRO_EVENT_KEY_DOWN)
     {
         txt->run(event);
+        NAME = txt->get_txt();
+        al_play_sample(click, 1.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
     }
     return INTER_CONTINUE;
 }
