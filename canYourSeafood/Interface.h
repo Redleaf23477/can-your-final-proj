@@ -2,6 +2,7 @@
 #define INTERFACE_H
 
 #include "global.h"
+#include "gifobj.h"
 #include "Object.h"
 
 class Interface
@@ -11,10 +12,10 @@ protected:
     ALLEGRO_EVENT event;
     ALLEGRO_DISPLAY *display;
     ALLEGRO_TIMER *timer;
-//    ALLEGRO_BITMAP *bg;
+    ALLEGRO_BITMAP *bg;
 
     vector<Object*> vis_objs;            // an array that stores every pointer of visible objects in the interface
-    int stat;
+    int inter_stat;
 
     virtual int process() = 0;
     virtual void draw();

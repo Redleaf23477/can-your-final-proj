@@ -2,7 +2,7 @@
 
 gameControl::gameControl()
 {
-    stat = STAT_INIT;
+    ctrl_stat = STAT_INIT;
     game_scene = NULL;
     display = NULL;
     srand(time(NULL));
@@ -16,9 +16,9 @@ void gameControl::run()
 {
     allegro_init();
     game_init();
-    while(stat != STAT_EXIT)
+    while(ctrl_stat != STAT_EXIT)
     {
-        switch(stat)
+        switch(ctrl_stat)
         {
         case STAT_OPENING:
             game_run();
@@ -33,7 +33,7 @@ void gameControl::run()
             game_run();
             break;
         default:
-            dbg << "!! Unknown stat=" << stat << " !!" << endl;
+            dbg << "!! Unknown stat=" << ctrl_stat << " !!" << endl;
             assert(false);
             break;
         }
@@ -62,13 +62,15 @@ void gameControl::allegro_init()
     al_install_audio();    // install audio event
 
     font_lib.load();       // load my fucking font library
+
+    al_reserve_samples(5); // at most 5 music at a time
 }
 
 void gameControl::game_init()
 {
     display = al_create_display(WIN_W, WIN_H);
     game_scene = new Opening(display);
-    stat = STAT_OPENING;
+    ctrl_stat = STAT_OPENING;
 }
 
 void gameControl::game_run()
@@ -78,21 +80,21 @@ void gameControl::game_run()
     {
         Interface *bye = game_scene; delete bye; game_scene = NULL;
         dbg << "old Interface killed" << endl;
-        switch(stat)
+        switch(ctrl_stat)
         {
-        case STAT_OPENING: stat = STAT_NAMING; game_scene = new Naming(display); break;
-        case STAT_NAMING:  stat = STAT_GAMING; game_scene = new Gaming(display); break;
-        case STAT_GAMING:  stat = STAT_ENDING; game_scene = new Ending(display); break;
-        case STAT_ENDING:  stat = STAT_EXIT; game_scene = NULL; break;
+        case STAT_OPENING: ctrl_stat = STAT_NAMING; game_scene = new Naming(display); break;
+        case STAT_NAMING:  ctrl_stat = STAT_GAMING; game_scene = new Gaming(display); break;
+        case STAT_GAMING:  ctrl_stat = STAT_ENDING; game_scene = new Ending(display); break;
+        case STAT_ENDING:  ctrl_stat = STAT_EXIT; game_scene = NULL; break;
         default:
-            dbg << "!! Unknown stat=" << stat << " !!" << endl;
+            dbg << "!! Unknown stat=" << ctrl_stat << " !!" << endl;
             assert(false);
             break;
         }
     }
     else if(res == INTER_EXIT)
     {
-        stat = STAT_EXIT;
+        ctrl_stat = STAT_EXIT;
     }
 }
 

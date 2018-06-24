@@ -12,7 +12,6 @@ class Ending : public Interface
 {
 protected:
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
     vector<EndingObj*> vis_obj_ending;
 

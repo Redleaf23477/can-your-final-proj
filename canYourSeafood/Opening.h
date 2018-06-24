@@ -9,9 +9,14 @@ class Opening : public Interface
 {
 protected:
     Object *mouse;
-    int stat;
     ButtonRD *start_but;
-    ALLEGRO_BITMAP * BG;
+
+    ALLEGRO_SAMPLE_INSTANCE *bgm;
+    ALLEGRO_SAMPLE *SE;
+
+    Gifobj* fish1;
+    Gifobj* fish2;
+
 
     int process();
 
@@ -19,6 +24,11 @@ public:
     Opening(ALLEGRO_DISPLAY*);
     ~Opening();
     int run();
+    void draw();
+    void update();
+
+    void animation();
+    void animation_init();
 };
 
 #endif // OPENING_H
