@@ -35,12 +35,16 @@ class Fonts
 private:
     // ALLEGRO_FONT *fontName_size
     ALLEGRO_FONT *impact_small;
+    ALLEGRO_FONT *ending_small;
+    ALLEGRO_FONT *ending_big;
     ALLEGRO_FONT *bebas_mini;
 
 public:
     Fonts()
     {
         impact_small = NULL;
+        ending_small = NULL;
+        ending_big = NULL;
         bebas_mini = NULL;
     }
     ~Fonts()
@@ -50,6 +54,10 @@ public:
     {
         dbg << "loading ttf fonts" << endl;
         impact_small = al_load_ttf_font("../assets/font/impact.ttf", 24, 0);
+        ending_small = al_load_ttf_font("../assets/font/impact.ttf", 24, 0);
+        ending_big = al_load_ttf_font("../assets/font/impact.ttf", 48, 0);
+        cout << "ttf fonts loaded" << endl;
+
         bebas_mini = al_load_ttf_font("../assets/font/bebas.ttf", 18, 0);
 
         dbg << "loading color" << endl;
@@ -67,9 +75,13 @@ public:
     void destroy()
     {
         al_destroy_font(impact_small);
+        al_destroy_font(ending_small);
+        al_destroy_font(ending_big);
     }
 
     ALLEGRO_FONT* button_txt() { return impact_small; }
+    ALLEGRO_FONT* ending_txt_s() { return ending_small; }
+    ALLEGRO_FONT* ending_txt_b() { return ending_big; }
     ALLEGRO_FONT* textbox_txt() { return impact_small; }
     ALLEGRO_FONT* icon_txt() { return bebas_mini; }
 };
