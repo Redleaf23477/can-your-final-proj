@@ -118,6 +118,10 @@ protected:
     Accessory *belt, *hat, *glass;
     Gifobj *fish;
     Ball *ball;
+
+    ALLEGRO_SAMPLE *hit;
+    ALLEGRO_SAMPLE *bite;
+
     int dropv;
     int bellycd;
 

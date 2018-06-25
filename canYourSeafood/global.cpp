@@ -1,5 +1,5 @@
 #include "global.h"
-
+string NAME = "";
 ALLEGRO_SAMPLE_INSTANCE* load_bgm(const char *filename, const ALLEGRO_PLAYMODE mode)
 {
     ALLEGRO_SAMPLE *sample = al_load_sample(filename);

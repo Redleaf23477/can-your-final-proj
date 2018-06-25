@@ -10,6 +10,8 @@ Gaming::Gaming(ALLEGRO_DISPLAY *dis):Interface(dis), fish_goto(0, 0, 0)
     game_stat = GAM_NOTHING;
 
     bg = load_bitmap_at_size("../assets/background/aquarium.jpg", WIN_W, WIN_H);
+    hit = al_load_sample( "../assets/music/hit.wav" );
+    bite = al_load_sample( "../assets/music/bite.wav" );
 
     mouse_touch = load_bitmap_at_size("../assets/hands/hand.png", 30, 30);
     mouse_grab = load_bitmap_at_size("../assets/hands/grab.png", 30, 30);
@@ -90,6 +92,9 @@ Gaming::~Gaming()
     al_destroy_bitmap(mouse_grab);
     al_destroy_mouse_cursor(cursor_touch);
     al_destroy_mouse_cursor(cursor_grab);
+    al_destroy_sample( hit );
+    al_destroy_sample( bite );
+
 }
 
 int Gaming::run()
@@ -232,12 +237,17 @@ int Gaming::process_game()
                 ball->set_v(-rand()%5-1, -rand()%5-1);
                 belly->set_current(belly->get_current()-5);
                 happy->set_current(happy->get_current()+5);
+
+                al_play_sample(hit, 1.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
             }
             if(ball->Move() == false) nxt_stat = GAM_NOTHING, ball->toggleHidden();
         }
         else if(event.type == ALLEGRO_EVENT_MOUSE_BUTTON_DOWN && event.mouse.button == 1)
         {
-            if(ball->collide(mouse)) ball->set_v(-ball->get_vx(), -ball->get_vy());
+            if(ball->collide(mouse)){
+                ball->set_v(-ball->get_vx(), -ball->get_vy());
+                al_play_sample(hit, 1.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
+            }
         }
     }
     else if(game_stat == GAM_TOUCH)
@@ -249,6 +259,7 @@ int Gaming::process_game()
             {
                 fish_goto.set_pos(rand()%(WIN_W-50), rand()%(WIN_H-100));
                 happy->set_current(happy->get_current()-1);
+                al_play_sample(bite, 1.0, 0, 1.0, ALLEGRO_PLAYMODE_ONCE,0);
             }
             else if(rand()%71 == 0) fish_goto.set_pos(rand()%(WIN_W-50), rand()%(WIN_H-100));
             fish->move_toward(fish_goto);

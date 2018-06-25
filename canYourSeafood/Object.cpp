@@ -20,5 +20,5 @@ bool Object::collide(const Object *obj) const
 
 void Object::draw()
 {
-    al_draw_filled_circle((float)pos.get_x(), (float)pos.get_y(), pos.get_r(), al_map_rgba(71, 22, 22, 200));
+    al_draw_filled_circle((float)pos.get_x(), (float)pos.get_y(), pos.get_r(), al_map_rgb(71, 22, 22));
 }

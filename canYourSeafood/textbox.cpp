@@ -44,3 +44,11 @@ void Textbox::draw()
     al_draw_filled_rectangle(x1, y1, x2, y2, box_col);
     al_draw_text(font, txt_col, x1 + width/2, y1, ALLEGRO_ALIGN_CENTER, str.c_str());
 }
+
+void Textbox::draw_for_ending()
+{
+    float x1 = pos.get_x(), x2 = x1+width;
+    float y1 = pos.get_y(), y2 = y1+height;
+    al_draw_filled_rectangle(x1, y1, x2, y2, box_col);
+    al_draw_text(font, txt_col, x1 + width/2, y1, ALLEGRO_ALIGN_LEFT, str.c_str());
+}
